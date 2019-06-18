@@ -4,7 +4,7 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install brew packages
-brew install bat gist git htop httpie hub node trash tree wget
+brew install bat gist git htop httpie hub node trash tree wget yarn
 
 # Add fonts repository to brew sources
 brew tap caskroom/fonts
