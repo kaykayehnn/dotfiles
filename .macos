@@ -2,11 +2,14 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install brew packages
-brew install bat gist git htop httpie hub trash tree wget
+brew install bat gist git htop httpie hub node trash tree wget
 
-# Install Fira Code font
+# Add fonts repository to brew sources
 brew tap caskroom/fonts
-brew cask install font-fira-code
+
+# Install brew cask apps
+brew cask install bettertouchtool google-chrome firefox font-fira-code \
+  visual-studio-code qlmarkdown qlstephen quicklook-json
 
 # Install Oh-My-ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -22,4 +25,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # Additional completion definitions for Zsh.
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 
-
+# Install npm packages
+npm install --global create-react-app fx gatsby-cli http-server jest lerna \
+  localtunnel netlify-cli nodemon np prettier serve@^6 source-map-explorer \
+  typescript webpack-bundle-analyzer
