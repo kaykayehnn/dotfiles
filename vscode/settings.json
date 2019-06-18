@@ -1,0 +1,79 @@
+{
+  "breadcrumbs.enabled": true,
+  "css.lint.unknownAtRules": "ignore",
+  "debug.inlineValues": true,
+  "debug.node.autoAttach": "off",
+  "diffEditor.renderSideBySide": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.gotoLocation.multiple": "goto",
+  "editor.renderControlCharacters": false,
+  "editor.renderWhitespace": "none",
+  "editor.smoothScrolling": true,
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "emmet.excludeLanguages": ["javascriptreact", "typescriptreact"],
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "javascriptreact",
+      "autoFix": true
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
+  ],
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.exclude": {
+    "**/*.scss.d.ts": true
+  },
+  "gitlens.mode.active": "zen",
+  "html.format.enable": false,
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": false,
+  "material-icon-theme.activeIconPack": "react_redux",
+  "material-icon-theme.files.associations": {
+    "*.state.ts": "Redux-Store",
+    "configureStore.ts": "Redux-Store"
+  },
+  "material-icon-theme.folders.associations": {
+    "state": "Redux-Store"
+  },
+  "material-icon-theme.folders.color": "#42a5f5",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "prettier.jsxBracketSameLine": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.printWidth": 100,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "search.location": "sidebar",
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "todohighlight.keywords": ["ENHANCEMENT"],
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.zoomLevel": 2,
+  "workbench.activityBar.visible": true,
+  "workbench.colorTheme": "Default Light+",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.statusBar.feedback.visible": false,
+  "zenMode.centerLayout": false
+}
