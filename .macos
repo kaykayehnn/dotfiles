@@ -2,7 +2,7 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install brew packages
-brew install bat gist htop httpie hub trash tree wget
+brew install bat gist git htop httpie hub trash tree wget
 
 # Install Fira Code font
 brew tap caskroom/fonts
