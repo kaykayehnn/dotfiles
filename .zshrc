@@ -7,6 +7,7 @@ export PATH=$PATH:~/.npm-global/bin:~/.cargo/bin:/usr/local/mysql/bin
 # Variables
 # Theme for the `bat` executable
 export BAT_THEME=GitHub
+export EDITOR=code
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/Krasimir/.oh-my-zsh"
