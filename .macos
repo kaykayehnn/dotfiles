@@ -1,0 +1,25 @@
+# Install homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Install brew packages
+brew install bat gist htop httpie hub trash tree wget
+
+# Install Fira Code font
+brew tap caskroom/fonts
+brew cask install font-fira-code
+
+# Install Oh-My-ZSH
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Install OMZ plugins
+
+# Fish-like fast/unobtrusive autosuggestions for zsh.
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# Fish shell-like syntax highlighting for Zsh.
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# Additional completion definitions for Zsh.
+git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+
+
