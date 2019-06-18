@@ -1,4 +1,4 @@
-DOTFILES_DIR=/path/to/this/repo
+DOTFILES_DIR=$HOME/.dotfiles
 
 # ZSH config file
 ln -s $DOTFILES_DIR/.zshrc ~/.zshrc
