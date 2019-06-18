@@ -115,3 +115,9 @@ autoload -U compinit && compinit
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Pings Cloudflare's DNS server
+alias ping1="ping 1.1.1.1"
+
+# Wrap git by hub:
+eval "$(hub alias -s)"
