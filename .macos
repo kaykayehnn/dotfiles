@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Run without downloading:
+# curl https://raw.githubusercontent.com/kaykayehnn/dotfiles/master/.macos | bash
+
 # Install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
