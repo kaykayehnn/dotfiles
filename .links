@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-DOTFILES_DIR=$HOME/.dotfiles
+DOTFILES_DIR="$HOME/.dotfiles"
 
 # ZSH config file
-ln -s $DOTFILES_DIR/.zshrc $HOME/.zshrc
+ln -s "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 
 # VSCode config files
-ln -s $DOTFILES_DIR/vscode/settings.json $HOME/Library/Application\ Support/Code/User/settings.json
-ln -s $DOTFILES_DIR/vscode/keybindings.json $HOME/Library/Application\ Support/Code/User/keybindings.json
-ln -s $DOTFILES_DIR/vscode/snippets/ $HOME/Library/Application\ Support/Code/User/snippets
+ln -s "$DOTFILES_DIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+ln -s "$DOTFILES_DIR/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
+ln -s "$DOTFILES_DIR/vscode/snippets/" "$HOME/Library/Application Support/Code/User/snippets"
