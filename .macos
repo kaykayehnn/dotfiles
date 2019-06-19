@@ -13,7 +13,7 @@ brew install bat gist git htop httpie hub node trash tree wget yarn
 brew tap caskroom/fonts
 
 # Install brew cask apps
-brew cask install bettertouchtool google-chrome firefox font-fira-code \
+brew cask install bettertouchtool firefox font-fira-code google-chrome \
   visual-studio-code qlmarkdown qlstephen quicklook-json
 
 # Install Oh-My-ZSH
