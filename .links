@@ -8,4 +8,14 @@ ln -s "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 # VSCode config files
 ln -s "$DOTFILES_DIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 ln -s "$DOTFILES_DIR/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
-ln -s "$DOTFILES_DIR/vscode/snippets/" "$HOME/Library/Application Support/Code/User/snippets"
+
+SNIPPETS_DIR="$HOME/Library/Application Support/Code/User/snippets"
+
+# While creating a symbolic link for a file is idempotent, for directories the
+# link is resolved and creates a new one at the source directory, recursively
+# pointing to itself.
+if ! test -d "$SNIPPETS_DIR"; then
+  ln -s "$DOTFILES_DIR/vscode/snippets/" "$SNIPPETS_DIR"
+else
+  echo "$SNIPPETS_DIR: Directory exists"
+fi
