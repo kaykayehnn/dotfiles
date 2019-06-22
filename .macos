@@ -16,6 +16,11 @@ brew tap caskroom/fonts
 brew cask install bettertouchtool firefox font-fira-code google-chrome iina \
   visual-studio-code qlmarkdown qlstephen quicklook-json
 
+# Install npm packages
+npm install --global create-react-app fx gatsby-cli http-server jest lerna \
+  localtunnel netlify-cli nodemon np prettier serve@^6 source-map-explorer \
+  typescript webpack-bundle-analyzer
+
 # Install Oh-My-ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
@@ -29,8 +34,3 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 # Additional completion definitions for Zsh.
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-
-# Install npm packages
-npm install --global create-react-app fx gatsby-cli http-server jest lerna \
-  localtunnel netlify-cli nodemon np prettier serve@^6 source-map-explorer \
-  typescript webpack-bundle-analyzer
