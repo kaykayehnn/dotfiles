@@ -122,3 +122,6 @@ alias ping1="ping 1.1.1.1"
 
 # Wrap git by hub:
 eval "$(hub alias -s)"
+
+# Opens package.json in bat
+alias batpkg="bat package.json"
