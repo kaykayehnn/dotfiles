@@ -6,31 +6,81 @@
 # Install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Packages are declared as alphabetically sorted arrays with one item per line
+# for the following reasons:
+# 1. Better git diffs
+# 2. Easier manual scanning when using a list command. That is, when executing
+#    `{npm, brew} list`, finding missing packages is O(n) instead of O(n^2)
+
+BREW_PACKAGES=(
+  bat
+  gist
+  git
+  htop
+  httpie
+  hub
+  node
+  trash
+  tree
+  wget
+)
+
+BREW_CASK_PACKAGES=(
+  bettertouchtool
+  firefox
+  font-fira-code
+  google-chrome
+  iina
+  visual-studio-code
+  qlmarkdown
+  qlstephen
+  quicklook-json
+)
+
+NPM_GLOBAL_PACKAGES=(
+  create-react-app
+  fx
+  gatsby-cli
+  http-server
+  jest
+  lerna
+  localtunnel
+  netlify-cli
+  nodemon
+  np
+  prettier
+  serve@^6
+  source-map-explorer
+  typescript
+  webpack-bundle-analyzer
+)
+
+OMZ_PLUGINS=(
+# Fish-like fast/unobtrusive autosuggestions for zsh.
+  zsh-users/zsh-autosuggestions
+# Fish shell-like syntax highlighting for Zsh.
+  zsh-users/zsh-syntax-highlighting
+# Additional completion definitions for Zsh.
+  zsh-users/zsh-completions
+)
+
 # Install brew packages
-brew install bat gist git htop httpie hub node trash tree wget yarn
+brew install ${BREW_PACKAGES[@]}
 
 # Add fonts repository to brew sources
 brew tap caskroom/fonts
 
 # Install brew cask apps
-brew cask install bettertouchtool firefox font-fira-code google-chrome iina \
-  visual-studio-code qlmarkdown qlstephen quicklook-json
+brew cask install ${BREW_CASK_PACKAGES[@]}
 
 # Install npm packages
-npm install --global create-react-app fx gatsby-cli http-server jest lerna \
-  localtunnel netlify-cli nodemon np prettier serve@^6 source-map-explorer \
-  typescript webpack-bundle-analyzer
+npm install --global ${NPM_GLOBAL_PACKAGES[@]}
 
 # Install Oh-My-ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install OMZ plugins
-
-# Fish-like fast/unobtrusive autosuggestions for zsh.
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-# Fish shell-like syntax highlighting for Zsh.
-git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-# Additional completion definitions for Zsh.
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
+for plugin in "${OMZ_PLUGINS[@]}"
+do
+  git clone "https://github.com/$plugin" "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/$(basename $plugin)"
+done
