@@ -41,13 +41,9 @@ NPM_GLOBAL_PACKAGES=(
   create-react-app
   fx
   gatsby-cli
-  http-server
   jest
-  lerna
-  localtunnel
   netlify-cli
   nodemon
-  np
   prettier
   serve@^6
   source-map-explorer
