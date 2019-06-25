@@ -74,7 +74,6 @@
   "window.zoomLevel": 2,
   "workbench.activityBar.visible": true,
   "workbench.colorTheme": "Default Light+",
-  "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.openPositioning": "first",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.statusBar.feedback.visible": false,
