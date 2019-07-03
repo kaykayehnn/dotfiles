@@ -31,10 +31,10 @@ BREW_CASK_PACKAGES=(
   font-fira-code
   google-chrome
   iina
-  visual-studio-code
   qlmarkdown
   qlstephen
   quicklook-json
+  visual-studio-code
 )
 
 NPM_GLOBAL_PACKAGES=(
