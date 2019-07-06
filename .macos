@@ -16,24 +16,47 @@ BREW_PACKAGES=(
   bat
   gist
   git
+  gpg2
+  gnupg
   htop
   httpie
   hub
+  mas
+  mysql@5.7
   node
+  pinentry-mac
   trash
   tree
   wget
+  yarn
 )
 
 BREW_CASK_PACKAGES=(
+  alfred
+  atom
   bettertouchtool
+  betterzip
+  disk-inventory-x
   firefox
+  flux
   font-fira-code
   google-chrome
+  handbrake
   iina
+  kap
+  macs-fan-control
+  mactracker
+  mysqlworkbench
+  postman
+  qlcolorcode
+  qlimagesize
   qlmarkdown
   qlstephen
+  qlvideo
   quicklook-json
+  spotify
+  # TODO: remove when Catalina comes out?
+  usage
   visual-studio-code
 )
 
