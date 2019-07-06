@@ -6,7 +6,9 @@ export PATH="$HOME/.npm-global/bin:$HOME/.cargo/bin:/usr/local/mysql/bin:$PATH"
 
 # Variables
 # Theme for the `bat` executable
-export BAT_THEME=GitHub
+export BAT_THEME="GitHub"
+# GPG requires this
+export GPG_TTY=$(tty)
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/Krasimir/.oh-my-zsh"
