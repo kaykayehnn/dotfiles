@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Fixes some global stuff
-export PATH=$PATH:~/.npm-global/bin:~/.cargo/bin:/usr/local/mysql/bin
+export PATH="$HOME/.npm-global/bin:$HOME/.cargo/bin:/usr/local/mysql/bin:$PATH"
 
 # Variables
 # Theme for the `bat` executable
