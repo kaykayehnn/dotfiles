@@ -25,6 +25,7 @@ BREW_PACKAGES=(
   mysql@5.7
   node
   pinentry-mac
+  ripgrep
   trash
   tree
   wget
