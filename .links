@@ -2,8 +2,15 @@
 
 DOTFILES_DIR="$HOME/.dotfiles"
 
-# ZSH config file
-ln -s "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
+CONFIG_FILES=(
+  .zshrc
+)
+
+# Config files
+for file in "${CONFIG_FILES[@]}"
+do
+  ln -s "$DOTFILES_DIR/$file" "$HOME/$file"
+done
 
 # VSCode config files
 ln -s "$DOTFILES_DIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
@@ -14,8 +21,9 @@ SNIPPETS_DIR="$HOME/Library/Application Support/Code/User/snippets"
 # While creating a symbolic link for a file is idempotent, for directories the
 # link is resolved and creates a new one at the source directory, recursively
 # pointing to itself.
-if ! test -d "$SNIPPETS_DIR"; then
-  ln -s "$DOTFILES_DIR/vscode/snippets/" "$SNIPPETS_DIR"
-else
+if [ -d "$SNIPPETS_DIR" ]
+then
   echo "$SNIPPETS_DIR: Directory exists"
+else
+  ln -s "$DOTFILES_DIR/vscode/snippets/" "$SNIPPETS_DIR"
 fi
