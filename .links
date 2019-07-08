@@ -4,6 +4,7 @@ DOTFILES_DIR="$HOME/.dotfiles"
 
 CONFIG_FILES=(
   .zshrc
+  .npmrc
 )
 
 # Config files
