@@ -86,13 +86,12 @@ plugins=(
 # Add brew completions in case they are not in FPATH already
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/github/README.md#homebrew-installation-note
 if (( ! ${fpath[(I)/usr/local/share/zsh/site-functions]} )); then
-FPATH=/usr/local/share/zsh/site-functions:$FPATH
+  FPATH=/usr/local/share/zsh/site-functions:$FPATH
 fi
 
 # Remove git's completions in favour of zsh's.
 # https://github.com/agross/dotfiles/commit/4938bc8987a5b4ef0c7411a2c4b988d89a3ade11
-if [ -f /usr/local/share/zsh/site-functions/_git ]
-then
+if [ -f /usr/local/share/zsh/site-functions/_git ]; then
   rm  -f /usr/local/share/zsh/site-functions/_git
 fi
 

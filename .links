@@ -8,8 +8,7 @@ CONFIG_FILES=(
 )
 
 # Config files
-for file in "${CONFIG_FILES[@]}"
-do
+for file in "${CONFIG_FILES[@]}"; do
   ln -s "$DOTFILES_DIR/$file" "$HOME/$file"
 done
 
@@ -22,8 +21,7 @@ SNIPPETS_DIR="$HOME/Library/Application Support/Code/User/snippets"
 # While creating a symbolic link for a file is idempotent, for directories the
 # link is resolved and creates a new one at the source directory, recursively
 # pointing to itself.
-if [ -d "$SNIPPETS_DIR" ]
-then
+if [ -d "$SNIPPETS_DIR" ]; then
   echo "$SNIPPETS_DIR: Directory exists"
 else
   ln -s "$DOTFILES_DIR/vscode/snippets/" "$SNIPPETS_DIR"

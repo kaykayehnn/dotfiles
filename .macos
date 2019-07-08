@@ -112,7 +112,6 @@ mas install ${MAC_APP_STORE_APPS[@]}
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install OMZ plugins
-for plugin in "${OMZ_PLUGINS[@]}"
-do
+for plugin in "${OMZ_PLUGINS[@]}"; do
   git clone "https://github.com/$plugin" "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/$(basename $plugin)"
 done
