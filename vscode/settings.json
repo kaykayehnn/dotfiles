@@ -14,7 +14,6 @@
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "emmet.excludeLanguages": ["javascriptreact", "typescriptreact"],
-  "eslint.autoFixOnSave": true,
   "eslint.validate": [
     {
       "language": "javascript",
