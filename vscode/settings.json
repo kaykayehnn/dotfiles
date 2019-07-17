@@ -39,7 +39,6 @@
     "**/*.scss.d.ts": true
   },
   "gitlens.mode.active": "zen",
-  "html.format.enable": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.validate.enable": false,
   "material-icon-theme.activeIconPack": "react_redux",
