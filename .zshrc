@@ -86,6 +86,8 @@ plugins=(
   vscode
   zsh-syntax-highlighting
   zsh-completions
+  yarn
+  frontend-search
 )
 
 # Add brew's completions in case they are not in FPATH already
