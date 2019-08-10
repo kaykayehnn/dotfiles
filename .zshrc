@@ -85,7 +85,7 @@ plugins=(
   zsh-completions
 )
 
-# Add brew completions in case they are not in FPATH already
+# Add brew's completions in case they are not in FPATH already
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/github/README.md#homebrew-installation-note
 if (( ! ${fpath[(I)/usr/local/share/zsh/site-functions]} )); then
   FPATH=/usr/local/share/zsh/site-functions:$FPATH
