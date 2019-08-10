@@ -51,6 +51,8 @@
   },
   "material-icon-theme.folders.color": "#42a5f5",
   "material-icon-theme.hidesExplorerArrows": true,
+  "terminal.integrated.rightClickBehavior": "copyPaste",
+  "terminal.integrated.scrollback": 10000,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.zoomLevel": 2,
