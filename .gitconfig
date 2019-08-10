@@ -1,0 +1,26 @@
+[user]
+	name = Krasimir Nedelchev
+	email = 19822240+kaykayehnn@users.noreply.github.com
+	signingkey = 4FE52B6A1B595173
+[core]
+	editor = code --wait
+	excludesfile = ~/.dotfiles/.gitignore_global
+	# Use diff-so-fancy in `git diff`
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[commit]
+	gpgsign = true
+# https://github.com/so-fancy/diff-so-fancy#improved-colors-for-the-highlighted-bits
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
