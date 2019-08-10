@@ -17,7 +17,6 @@ BREW_PACKAGES=(
   coreutils
   gist
   git
-  gpg2
   gnupg
   htop
   httpie
