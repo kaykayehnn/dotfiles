@@ -23,6 +23,9 @@ NPM_GLOBAL_PACKAGES=(
   webpack-bundle-analyzer
 )
 
+# Install npm packages
+yarn global add ${NPM_GLOBAL_PACKAGES[@]}
+
 OMZ_PLUGINS=(
 # Fish-like fast/unobtrusive autosuggestions for zsh.
   zsh-users/zsh-autosuggestions
@@ -31,9 +34,6 @@ OMZ_PLUGINS=(
 # Additional completion definitions for Zsh.
   zsh-users/zsh-completions
 )
-
-# Install npm packages
-npm install --global ${NPM_GLOBAL_PACKAGES[@]}
 
 # Install Oh-My-ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
