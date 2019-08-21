@@ -118,9 +118,9 @@ autoload -U compinit && compinit
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nano'
+  export EDITOR='micro'
 else
-  export EDITOR='code'
+  export EDITOR='micro'
 fi
 
 # Compilation flags
