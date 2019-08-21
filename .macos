@@ -3,8 +3,11 @@
 # Run without downloading:
 # curl https://raw.githubusercontent.com/kaykayehnn/dotfiles/master/.macos | bash
 
-# Install homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# Check if brew is installed
+if ! command -v brew > /dev/null 2>&1; then
+	echo "Installing homebrew..."
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 # Install deps from Brewfile
 brew bundle
@@ -26,6 +29,12 @@ NPM_GLOBAL_PACKAGES=(
 # Install npm packages
 yarn global add ${NPM_GLOBAL_PACKAGES[@]}
 
+# Check if oh-my-zsh is installed
+if ! [ -e "$HOME/.oh-my-zsh" ]; then
+	echo "Installing oh-my-zsh..."
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+
 OMZ_PLUGINS=(
 # Fish-like fast/unobtrusive autosuggestions for zsh.
   zsh-users/zsh-autosuggestions
@@ -35,16 +44,18 @@ OMZ_PLUGINS=(
   zsh-users/zsh-completions
 )
 
-# Install Oh-My-ZSH
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 # Install OMZ plugins
+: "${ZSH_CUSTOM:="$HOME/.oh-my-zsh/custom"}"
 for plugin in "${OMZ_PLUGINS[@]}"; do
-  git clone "https://github.com/$plugin" "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/$(basename $plugin)"
+	pluginPath="$ZSH_CUSTOM/plugins/$(basename $plugin)"
+	if ! [ -e "$pluginPath" ]; then
+  	echo git clone "https://github.com/$plugin" "$ZSH_CUSTOM/plugins/$(basename $plugin)"
+	fi
 done
 
 # Install tmux plugins
 # https://github.com/tmux-plugins/tpm/blob/master/docs/automatic_tpm_installation.md
 if ! [ -d "$HOME/.tmux/plugins/tpm" ]; then
-   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins
+	echo "Installing tmux plugins..."
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins
 fi
