@@ -42,3 +42,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 for plugin in "${OMZ_PLUGINS[@]}"; do
   git clone "https://github.com/$plugin" "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/$(basename $plugin)"
 done
+
+# Install tmux plugins
+# https://github.com/tmux-plugins/tpm/blob/master/docs/automatic_tpm_installation.md
+if ! [ -d "$HOME/.tmux/plugins/tpm" ]; then
+   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins
+fi
