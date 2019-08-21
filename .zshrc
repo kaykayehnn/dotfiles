@@ -96,12 +96,6 @@ if (( ! ${fpath[(I)/usr/local/share/zsh/site-functions]} )); then
   FPATH=/usr/local/share/zsh/site-functions:$FPATH
 fi
 
-# Remove git's completions in favour of zsh's.
-# https://github.com/agross/dotfiles/commit/4938bc8987a5b4ef0c7411a2c4b988d89a3ade11
-if [ -f /usr/local/share/zsh/site-functions/_git ]; then
-  rm  -f /usr/local/share/zsh/site-functions/_git
-fi
-
 source $ZSH/oh-my-zsh.sh
 
 # zsh-completions init
@@ -135,11 +129,3 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Pings Cloudflare's DNS server
-alias ping1="ping 1.1.1.1"
-
-# Wrap git by hub:
-eval "$(hub alias -s)"
-
-# Opens package.json in bat
-alias batpkg="bat package.json"
