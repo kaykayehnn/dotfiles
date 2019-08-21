@@ -15,19 +15,31 @@
 BREW_PACKAGES=(
   bat
   coreutils
+  diff-so-fancy
   gist
   git
+  glances
   gnupg
   htop
   httpie
   hub
   mas
+  micro
+  mycli
   mysql@5.7
+  ncdu
+  neofetch
   node
   pinentry-mac
+# Required for tmux-yank
+  reattach-to-user-namespace
   ripgrep
+  ruby
+  tldr
+  tmux
   trash
   tree
+  vegeta
   wget
   yarn
 )
@@ -55,6 +67,8 @@ BREW_CASK_PACKAGES=(
   qlstephen
   qlvideo
   quicklook-json
+  rocket
+  sizeup
   spotify
   # TODO: remove when Catalina comes out?
   usage
