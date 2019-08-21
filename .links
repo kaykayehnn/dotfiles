@@ -4,7 +4,7 @@
 
 # Assign default values in case they are not set.
 : "${DOTFILES_DIR:="$HOME/.dotfiles"}"
-: "${ZSH_CUSTOM:="$ZSH/custom"}"
+: "${ZSH_CUSTOM:="$HOME/.oh-my-zsh/custom"}"
 
 # This associative array holds source:target pairs which need to be symlinked.
 typeset -A SYMLINK_MAP=(
