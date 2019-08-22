@@ -4,7 +4,7 @@
 	signingkey = 4FE52B6A1B595173
 [core]
 	editor = code --wait
-	excludesfile = ~/.dotfiles/.gitignore_global
+	excludesfile = ~/.dotfiles/git/.gitignore_global
 	# Use diff-so-fancy in `git diff`
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [commit]
