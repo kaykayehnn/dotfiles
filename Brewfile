@@ -25,6 +25,7 @@ brew "ncdu"
 brew "neofetch"
 brew "node"
 brew "pinentry-mac"
+brew "ranger"
 # Required for tmux-yank
 brew "reattach-to-user-namespace"
 brew "ripgrep"
