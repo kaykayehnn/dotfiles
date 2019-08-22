@@ -5,7 +5,6 @@
 export PATH="$HOME/.cargo/bin:/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # Variables
-# Theme for the `bat` executable
 export BAT_THEME="GitHub"
 export RIPGREP_CONFIG_PATH="$HOME/.dotfiles/.ripgreprc"
 
