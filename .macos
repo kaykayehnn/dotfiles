@@ -53,9 +53,12 @@ for plugin in "${OMZ_PLUGINS[@]}"; do
 	fi
 done
 
-# Install tmux plugins
+# Install tmux plugin manager
 # https://github.com/tmux-plugins/tpm/blob/master/docs/automatic_tpm_installation.md
 if ! [ -d "$HOME/.tmux/plugins/tpm" ]; then
 	echo "Installing tmux plugins..."
-	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
+
+# Install tmux plugins
+~/.tmux/plugins/tpm/bin/install_plugins
