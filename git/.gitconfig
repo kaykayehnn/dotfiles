@@ -1,14 +1,11 @@
-[user]
-	name = Krasimir Nedelchev
-	email = 19822240+kaykayehnn@users.noreply.github.com
-	signingkey = 4FE52B6A1B595173
+[include]
+	# This file is for user-specific settings (name, email, signingkey etc.)
+	path = ~/.dotfiles/git/.gitconfig.local
 [core]
 	editor = code --wait
 	excludesfile = ~/.dotfiles/git/.gitignore_global
 	# Use diff-so-fancy in `git diff`
 	pager = diff-so-fancy | less --tabs=4 -RFX
-[commit]
-	gpgsign = true
 # https://github.com/so-fancy/diff-so-fancy#improved-colors-for-the-highlighted-bits
 [color]
 	ui = true
