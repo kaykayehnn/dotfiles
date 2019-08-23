@@ -69,6 +69,7 @@ CODE_EXTENSIONS=(
 	eamodio.gitlens
 	EditorConfig.EditorConfig
 	esbenp.prettier-vscode
+	Gruntfuggly.todo-tree
 	jasonnutter.search-node-modules
 	johnpapa.vscode-peacock
 	msjsdiag.debugger-for-chrome
@@ -76,7 +77,6 @@ CODE_EXTENSIONS=(
 	pnp.polacode
 	sdras.night-owl
 	VisualStudioExptTeam.vscodeintellicode
-	wayou.vscode-todo-highlight
 )
 
 for extension in "${CODE_EXTENSIONS[@]}"; do
