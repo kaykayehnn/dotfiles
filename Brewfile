@@ -62,7 +62,6 @@ cask "qlmarkdown"
 cask "qlstephen"
 cask "qlvideo"
 cask "quicklook-json"
-cask "rocket"
 cask "sizeup"
 cask "spotify"
 # TODO: remove when Catalina comes out?
