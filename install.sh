@@ -62,3 +62,23 @@ fi
 
 # Install tmux plugins
 ~/.tmux/plugins/tpm/bin/install_plugins
+
+CODE_EXTENSIONS=(
+	CoenraadS.bracket-pair-colorizer
+	dbaeumer.vscode-eslint
+	eamodio.gitlens
+	EditorConfig.EditorConfig
+	esbenp.prettier-vscode
+	jasonnutter.search-node-modules
+	johnpapa.vscode-peacock
+	msjsdiag.debugger-for-chrome
+	PKief.material-icon-theme
+	pnp.polacode
+	sdras.night-owl
+	VisualStudioExptTeam.vscodeintellicode
+	wayou.vscode-todo-highlight
+)
+
+for extension in "${CODE_EXTENSIONS[@]}"; do
+	/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension "$extension"
+done
