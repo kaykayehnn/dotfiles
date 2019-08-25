@@ -4,5 +4,5 @@ if [ -f /usr/local/share/zsh/site-functions/_git ]; then
   rm  -f /usr/local/share/zsh/site-functions/_git
 fi
 
-# Wrap git by hub:
+# Wrap git by hub
 eval "$(hub alias -s)"
