@@ -7,7 +7,6 @@ export PATH="$HOME/.cargo/bin:/usr/local/opt/mysql@5.7/bin:$PATH"
 # Variables
 export BAT_CONFIG_PATH="$HOME/.dotfiles/.batrc"
 export RIPGREP_CONFIG_PATH="$HOME/.dotfiles/.ripgreprc"
-
 # GPG requires this
 export GPG_TTY=$(tty)
 
@@ -127,4 +126,3 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
