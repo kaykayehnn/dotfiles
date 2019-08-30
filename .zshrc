@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Fixes some global stuff
-export PATH="$HOME/.cargo/bin:/usr/local/opt/mysql@5.7/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Variables
 export BAT_CONFIG_PATH="$HOME/.dotfiles/.batrc"

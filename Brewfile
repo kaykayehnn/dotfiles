@@ -23,7 +23,7 @@ brew "lynx"
 brew "mas"
 brew "micro"
 brew "mycli"
-brew "mysql@5.7", restart_service: :changed
+brew "mysql", restart_service: :changed
 brew "ncdu"
 brew "neofetch"
 brew "node"
