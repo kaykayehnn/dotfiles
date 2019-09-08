@@ -6,6 +6,7 @@ tap "homebrew/core"
 tap "homebrew/services"
 
 # Packages
+brew "arp-scan"
 brew "bat"
 brew "coreutils"
 brew "diff-so-fancy"
@@ -33,6 +34,7 @@ brew "ranger"
 # Required for tmux-yank
 brew "reattach-to-user-namespace"
 brew "ripgrep"
+brew "rsync"
 brew "ruby"
 brew "tldr"
 brew "tmux"
