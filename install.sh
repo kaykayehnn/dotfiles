@@ -49,7 +49,7 @@ OMZ_PLUGINS=(
 for plugin in "${OMZ_PLUGINS[@]}"; do
 	pluginPath="$ZSH_CUSTOM/plugins/$(basename $plugin)"
 	if ! [ -e "$pluginPath" ]; then
-  	echo git clone "https://github.com/$plugin" "$ZSH_CUSTOM/plugins/$(basename $plugin)"
+  	git clone "https://github.com/$plugin" "$ZSH_CUSTOM/plugins/$(basename $plugin)"
 	fi
 done
 
