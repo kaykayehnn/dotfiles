@@ -1,23 +1,23 @@
 [include]
-	# This file is for user-specific settings (name, email, signingkey etc.)
-	path = ~/.dotfiles/git/.gitconfig.local
+  # This file is for user-specific settings (name, email, signingkey etc.)
+  path = ~/.dotfiles/git/.gitconfig.local
 [core]
-	editor = code --wait
-	excludesfile = ~/.dotfiles/git/.gitignore_global
-	# Use diff-so-fancy in `git diff`
-	pager = diff-so-fancy | less --tabs=4 -RFX
+  editor = code --wait
+  excludesfile = ~/.dotfiles/git/.gitignore_global
+  # Use diff-so-fancy in `git diff`
+  pager = diff-so-fancy | less --tabs=4 -RFX
 # https://github.com/so-fancy/diff-so-fancy#improved-colors-for-the-highlighted-bits
 [color]
-	ui = true
+  ui = true
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
 [color "diff"]
-	meta = 11
-	frag = magenta bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
+  meta = 11
+  frag = magenta bold
+  commit = yellow bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse

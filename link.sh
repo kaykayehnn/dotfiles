@@ -8,15 +8,15 @@
 
 # This associative array holds source:target pairs which need to be symlinked.
 typeset -A SYMLINK_MAP=(
-	# RC files
+  # RC files
   "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
   "$DOTFILES_DIR/.yarnrc" "$HOME/.yarnrc"
   "$DOTFILES_DIR/git/.gitconfig" "$HOME/.gitconfig"
   "$DOTFILES_DIR/.editorconfig" "$HOME/.editorconfig"
   "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
-	# Micro editor config
+  # Micro editor config
   "$DOTFILES_DIR/micro.json" "$HOME/.config/micro/settings.json"
-	# VSCode files
+  # VSCode files
   "$DOTFILES_DIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
   "$DOTFILES_DIR/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
   "$DOTFILES_DIR/vscode/snippets/" "$HOME/Library/Application Support/Code/User/snippets"
@@ -29,24 +29,24 @@ done
 
 # Link files
 for source target in ${(kv)SYMLINK_MAP}; do
-	# Target is already linked
-	if [ -L "$target" ]; then
-		targetSource=$(readlink "$target")
+  # Target is already linked
+  if [ -L "$target" ]; then
+    targetSource=$(readlink "$target")
     if [ "$source" = $targetSource ]; then
-			echo "$source is already linked"
+      echo "$source is already linked"
     else
       echo "$source could not be linked as a symbolic link already exists at $target\nThe symbolic link points to $targetSource"
     fi
 
-		continue
-	fi
+    continue
+  fi
 
   # Target exists
   if [ -e "$target" ]; then
     echo $source could not be linked because $target exists.
-		continue
+    continue
   fi
 
-	echo "Linking $source..."
+  echo "Linking $source..."
   ln -s "$source" "$target"
 done
