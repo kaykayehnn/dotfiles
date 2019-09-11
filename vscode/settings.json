@@ -107,7 +107,7 @@
   ],
   "terminal.integrated.rightClickBehavior": "copyPaste",
   "terminal.integrated.scrollback": 10000,
-  "todo-tree.customHighlight": {
+  "todo-tree.highlights.customHighlight": {
     "FIXME:": {
       "icon": "alert",
       "foreground": "#fff",
@@ -115,14 +115,14 @@
       "iconColour": "#f06292"
     }
   },
-  "todo-tree.defaultHighlight": {
+  "todo-tree.highlights.defaultHighlight": {
     "type": "tag",
     "foreground": "#fff",
     "background": "#ffbd2a",
     "iconColour": "green",
     "borderRadius": "0"
   },
-  "todo-tree.highlightDelay": 0,
+  "todo-tree.highlights.highlightDelay": 0,
   // Highlight the colons as well
   "todo-tree.tags": ["TODO:", "FIXME:"],
   "typescript.updateImportsOnFileMove.enabled": "always",
