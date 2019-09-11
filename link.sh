@@ -47,6 +47,9 @@ for source target in ${(kv)SYMLINK_MAP}; do
     continue
   fi
 
+  # Ensure directory exists
+  mkdir -p $(dirname $target)
+
   echo "Linking $source..."
   ln -s "$source" "$target"
 done
