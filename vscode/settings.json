@@ -124,7 +124,10 @@
   },
   "todo-tree.highlights.highlightDelay": 0,
   // Highlight the colons as well
-  "todo-tree.tags": ["TODO:", "FIXME:"],
+  "todo-tree.general.tags": [
+    "TODO:",
+    "FIXME:"
+  ],
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.zoomLevel": 2,
