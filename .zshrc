@@ -2,11 +2,10 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Variables
+export EDITOR="micro"
+export GPG_TTY="$(tty)"
 export BAT_CONFIG_PATH="$HOME/.dotfiles/.batrc"
 export RIPGREP_CONFIG_PATH="$HOME/.dotfiles/.ripgreprc"
-# GPG requires this
-export GPG_TTY=$(tty)
-export EDITOR="micro"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
