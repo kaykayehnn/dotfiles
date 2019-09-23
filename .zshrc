@@ -9,6 +9,7 @@ export BAT_CONFIG_PATH="$HOME/.dotfiles/.batrc"
 export RIPGREP_CONFIG_PATH="$HOME/.dotfiles/.ripgreprc"
 # GPG requires this
 export GPG_TTY=$(tty)
+export EDITOR="micro"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -107,13 +108,6 @@ autoload -U compinit && compinit
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='micro'
-else
-  export EDITOR='micro'
-fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
