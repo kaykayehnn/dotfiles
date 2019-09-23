@@ -1,9 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Fixes some global stuff
-export PATH="$HOME/.cargo/bin:$PATH"
-
 # Variables
 export BAT_CONFIG_PATH="$HOME/.dotfiles/.batrc"
 export RIPGREP_CONFIG_PATH="$HOME/.dotfiles/.ripgreprc"
