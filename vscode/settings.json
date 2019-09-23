@@ -39,6 +39,7 @@
   "files.exclude": {
     "**/*.scss.d.ts": true
   },
+  "git.confirmSync": false,
   "gitlens.mode.active": "zen",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.validate.enable": false,
