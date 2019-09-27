@@ -80,5 +80,5 @@ CODE_EXTENSIONS=(
 )
 
 for extension in "${CODE_EXTENSIONS[@]}"; do
-  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension "$extension"
+  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension "$extension" --force
 done
