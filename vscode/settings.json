@@ -107,6 +107,7 @@
       "value": "#42b883"
     }
   ],
+  "prettier.trailingComma": "es5",
   "terminal.integrated.rightClickBehavior": "copyPaste",
   "terminal.integrated.shell.osx": "/usr/local/bin/tmux",
   "terminal.integrated.shellArgs.osx": ["new", "-A", "-s", "vscode"],
