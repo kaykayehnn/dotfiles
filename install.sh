@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Run without downloading:
-# curl https://raw.githubusercontent.com/kaykayehnn/dotfiles/master/.macos | bash
-
 # Check if brew is installed
 if ! command -v brew > /dev/null 2>&1; then
   echo "Installing homebrew..."
