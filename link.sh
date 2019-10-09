@@ -16,7 +16,6 @@ typeset -A SYMLINK_MAP=(
   "$DOTFILES_DIR/.editorconfig" "$HOME/.editorconfig"
   "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
   "$DOTFILES_DIR/glances.conf" "/usr/local/etc/glances/glances.conf"
-  # Micro editor config
   "$DOTFILES_DIR/micro.json" "$HOME/.config/micro/settings.json"
   # VSCode files
   "$DOTFILES_DIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
