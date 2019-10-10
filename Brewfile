@@ -72,8 +72,6 @@ cask "qlvideo"
 cask "quicklook-json"
 cask "sizeup"
 cask "spotify"
-# TODO: remove when Catalina comes out?
-cask "usage"
 cask "visual-studio-code"
 
 # MAS Apps
