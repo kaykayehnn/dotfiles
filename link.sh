@@ -22,6 +22,10 @@ typeset -A SYMLINK_MAP=(
   "$DOTFILES_DIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
   "$DOTFILES_DIR/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
   "$DOTFILES_DIR/vscode/snippets/" "$HOME/Library/Application Support/Code/User/snippets"
+  # Since vscode's configuration does not support using ~ or providing a
+  # variable like $HOME, this is the most appropriate path to put such an
+  # executable.
+  "$DOTFILES_DIR/vscode/vscode-shell.sh" "/usr/local/bin/vscode-shell"
 )
 
 # Add zsh custom files
