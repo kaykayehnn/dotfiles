@@ -7,6 +7,7 @@ tap "homebrew/core"
 tap "homebrew/services"
 
 # Packages
+brew "asciinema"
 brew "arp-scan"
 brew "bat"
 brew "coreutils"
