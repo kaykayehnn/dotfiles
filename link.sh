@@ -29,7 +29,7 @@ typeset -A SYMLINK_MAP=(
 )
 
 # Add zsh custom files
-for filename in $DOTFILES_DIR/oh-my-zsh/*.zsh; do
+for filename in $DOTFILES_DIR/shell/*.zsh; do
     SYMLINK_MAP[$filename]="$ZSH_CUSTOM/$(basename $filename)"
 done
 

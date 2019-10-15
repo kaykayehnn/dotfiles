@@ -3,10 +3,7 @@
 
 # Variables
 export EDITOR="micro"
-export GPG_TTY="$(tty)"
 export LANG="en_US.UTF-8"
-export BAT_CONFIG_PATH="$HOME/.dotfiles/.batrc"
-export RIPGREP_CONFIG_PATH="$HOME/.dotfiles/.ripgreprc"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
