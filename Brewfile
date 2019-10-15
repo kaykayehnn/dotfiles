@@ -32,6 +32,7 @@ brew "mysql", restart_service: :changed
 brew "ncdu"
 brew "neofetch"
 brew "node"
+brew "nyancat"
 brew "pigz"
 brew "pinentry-mac"
 brew "ranger"
