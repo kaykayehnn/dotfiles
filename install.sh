@@ -9,6 +9,9 @@ fi
 # Install deps from Brewfile
 brew bundle
 
+# Install latest node
+nvm install stable
+
 NPM_GLOBAL_PACKAGES=(
   create-react-app
   fx

@@ -14,6 +14,10 @@ if [ -f /usr/local/share/zsh/site-functions/_git ]; then
   rm  -f /usr/local/share/zsh/site-functions/_git
 fi
 
+# Setup nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+
 setup_fzf() {
   local FD_COMMAND="fd --hidden --exclude .git --exclude node_modules"
 
