@@ -38,18 +38,15 @@ fi
 # Install powerlevel10k theme
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
-OMZ_PLUGINS=(
-# Fish-like fast/unobtrusive autosuggestions for zsh.
+ZSH_PLUGINS=(
   zsh-users/zsh-autosuggestions
-# Fish shell-like syntax highlighting for Zsh.
   zsh-users/zsh-syntax-highlighting
-# Additional completion definitions for Zsh.
   zsh-users/zsh-completions
 )
 
-# Install OMZ plugins
+# Install zsh plugins
 : "${ZSH_CUSTOM:="$HOME/.oh-my-zsh/custom"}"
-for plugin in "${OMZ_PLUGINS[@]}"; do
+for plugin in "${ZSH_PLUGINS[@]}"; do
   pluginPath="$ZSH_CUSTOM/plugins/$(basename $plugin)"
   if ! [ -e "$pluginPath" ]; then
     git clone "https://github.com/$plugin" "$ZSH_CUSTOM/plugins/$(basename $plugin)"
