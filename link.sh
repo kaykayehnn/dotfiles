@@ -10,7 +10,6 @@
 typeset -A SYMLINK_MAP=(
   # RC files
   "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
-  "$DOTFILES_DIR/.yarnrc" "$HOME/.yarnrc"
   "$DOTFILES_DIR/.myclirc" "$HOME/.myclirc"
   "$DOTFILES_DIR/git/.gitconfig" "$HOME/.gitconfig"
   "$DOTFILES_DIR/.editorconfig" "$HOME/.editorconfig"
