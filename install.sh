@@ -35,6 +35,7 @@ if ! [ -e "$HOME/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
+: "${ZSH_CUSTOM:="$HOME/.oh-my-zsh/custom"}"
 # Install powerlevel10k theme
 git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
 
@@ -45,7 +46,6 @@ ZSH_PLUGINS=(
 )
 
 # Install zsh plugins
-: "${ZSH_CUSTOM:="$HOME/.oh-my-zsh/custom"}"
 for plugin in "${ZSH_PLUGINS[@]}"; do
   pluginPath="$ZSH_CUSTOM/plugins/$(basename $plugin)"
   if ! [ -e "$pluginPath" ]; then
