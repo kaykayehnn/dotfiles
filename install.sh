@@ -10,7 +10,7 @@ fi
 brew bundle
 
 # Install latest node
-nvm install stable
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh" && nvm install stable # This loads nvm
 
 NPM_GLOBAL_PACKAGES=(
   create-react-app
