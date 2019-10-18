@@ -29,6 +29,12 @@ NPM_GLOBAL_PACKAGES=(
 # Install npm packages
 yarn global add ${NPM_GLOBAL_PACKAGES[@]}
 
+RUBY_GEMS=(
+  colorls
+)
+
+gem install "${RUBY_GEMS[@]}"
+
 # Check if oh-my-zsh is installed
 if ! [ -e "$HOME/.oh-my-zsh" ]; then
   echo "Installing oh-my-zsh..."
