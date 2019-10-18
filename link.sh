@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 # The default bash shipped with macOS (3.2) does not support associative
-# arrays. In order to run this this script you need zsh.
+# arrays. In order to run this this script you need zsh or a newer version of
+# bash.
 
 # Assign default values in case they are not set.
 : "${DOTFILES_DIR:="$HOME/.dotfiles"}"
