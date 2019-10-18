@@ -4,6 +4,7 @@
 export GPG_TTY="$(tty)"
 export BAT_CONFIG_PATH="$HOME/.dotfiles/.batrc"
 export RIPGREP_CONFIG_PATH="$HOME/.dotfiles/.ripgreprc"
+export GEM_HOME="$HOME/.gem"
 
 eval "$(hub alias -s)"
 eval $(thefuck --alias)
