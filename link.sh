@@ -32,7 +32,9 @@ for filename in $DOTFILES_DIR/shell/*.zsh; do
     SYMLINK_MAP[$filename]="$ZSH_CUSTOM/$(basename $filename)"
 done
 
-# Link files
+# Exit with 0 if all files linked successfully, with 1 if any of them failed.
+exit_code=0
+
 for source target in ${(kv)SYMLINK_MAP}; do
   # Target is already linked
   if [ -L "$target" ]; then
@@ -40,6 +42,7 @@ for source target in ${(kv)SYMLINK_MAP}; do
     if [ "$source" = $targetSource ]; then
       echo "$source is already linked"
     else
+      exit_code=1
       echo "$source could not be linked as a symbolic link already exists at $target\nThe symbolic link points to $targetSource"
     fi
 
@@ -48,6 +51,7 @@ for source target in ${(kv)SYMLINK_MAP}; do
 
   # Target exists
   if [ -e "$target" ]; then
+    exit_code=1
     echo $source could not be linked because $target exists.
     continue
   fi
@@ -58,3 +62,5 @@ for source target in ${(kv)SYMLINK_MAP}; do
   echo "Linking $source..."
   ln -s "$source" "$target"
 done
+
+exit $exit_code
