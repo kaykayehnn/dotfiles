@@ -35,9 +35,10 @@ done
 # Exit with 0 if all files linked successfully, with 1 if any of them failed.
 exit_code=0
 
-for source target in ${(kv)SYMLINK_MAP}; do
-  # Target is already linked
+for source in "${(@k)SYMLINK_MAP}"; do
+  target=${SYMLINK_MAP[$source]}
   if [ -L "$target" ]; then
+  # Target is already linked
     targetSource=$(readlink "$target")
     if [ "$source" = $targetSource ]; then
       echo "$source is already linked"

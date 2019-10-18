@@ -12,12 +12,12 @@ eval $(thefuck --alias)
 # Remove git's completions in favour of zsh's.
 # https://github.com/agross/dotfiles/commit/4938bc8987a5b4ef0c7411a2c4b988d89a3ade11
 if [ -f /usr/local/share/zsh/site-functions/_git ]; then
-  rm  -f /usr/local/share/zsh/site-functions/_git
+  rm -f /usr/local/share/zsh/site-functions/_git
 fi
 
 # Setup nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh" # This loads nvm
 
 setup_fzf() {
   local FD_COMMAND="fd --hidden --exclude .git --exclude node_modules"
@@ -36,7 +36,7 @@ setup_fzf() {
 
   # Auto-completion
   # ---------------
-  [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
+  [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2>/dev/null
 
   # Key bindings
   # ------------
