@@ -1,4 +1,7 @@
 {
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
   "css.lint.unknownAtRules": "ignore",
   "debug.inlineValues": true,
   "debug.node.autoAttach": "off",
