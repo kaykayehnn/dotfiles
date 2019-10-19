@@ -39,7 +39,7 @@ brew "pigz"
 brew "pinentry-mac"
 brew "pv"
 brew "ranger"
-# Required for tmux-yank
+# Dependency of tmux-yank
 brew "reattach-to-user-namespace"
 brew "ripgrep"
 brew "rsync"
