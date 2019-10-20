@@ -20,3 +20,7 @@
   old = red bold
   new = green bold
   whitespace = red reverse
+[instaweb]
+  # Python's http server is installed by default on macOS, unlike lighttpd
+  # (git's default httpd)
+  httpd = python
