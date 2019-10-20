@@ -86,6 +86,8 @@ cask "quicklook-json"
 cask "sizeup"
 cask "spotify"
 cask "visual-studio-code"
+cask "vlc"
+cask "vnc-viewer"
 
 # MAS Apps
 mas "Keynote", id: 409183694
