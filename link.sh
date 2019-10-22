@@ -37,32 +37,34 @@ done
 exit_code=0
 
 for source in "${(@k)SYMLINK_MAP}"; do
-  target=${SYMLINK_MAP[$source]}
-  if [ -L "$target" ]; then
-  # Target is already linked
-    targetSource=$(readlink "$target")
-    if [ "$source" = $targetSource ]; then
-      echo "$source is already linked"
+  target="${SYMLINK_MAP[$source]}"
+
+  # If target exists
+  if [ -e "$target" ]; then
+    # and it is a symlink
+    if [ -L "$target" ]; then
+      targetSource=$(readlink "$target")
+      if [ "$source" = "$targetSource" ]; then
+        # It is already linked, do nothing
+      else
+        exit_code=1
+        echo "$source could not be linked because a symbolic link already exists at $target\nThe symbolic link points to $targetSource"
+      fi
+
+      continue
     else
-      exit_code=1
-      echo "$source could not be linked as a symbolic link already exists at $target\nThe symbolic link points to $targetSource"
+      echo "$source could not be linked because $target exists."
     fi
 
-    continue
-  fi
-
-  # Target exists
-  if [ -e "$target" ]; then
     exit_code=1
-    echo $source could not be linked because $target exists.
     continue
   fi
 
   # Ensure directory exists
-  mkdir -p $(dirname $target)
+  mkdir -p "$(dirname "$target")"
 
-  echo "Linking $source..."
   ln -s "$source" "$target"
+  echo "Linked $source..."
 done
 
 exit $exit_code
