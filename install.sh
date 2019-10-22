@@ -83,7 +83,6 @@ CODE_EXTENSIONS=(
   pnp.polacode
   sdras.night-owl
   VisualStudioExptTeam.vscodeintellicode
-  foxundermoon.shell-format
 )
 
 for extension in "${CODE_EXTENSIONS[@]}"; do
