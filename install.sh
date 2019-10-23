@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+# This script is idempotent - you can run it at any time to update your
+# installation.
 
 # Check if brew is installed
 if ! command -v brew >/dev/null 2>&1; then
