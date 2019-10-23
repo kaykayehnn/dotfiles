@@ -36,10 +36,27 @@ init_nvm() {
 }
 lazy nvm init_nvm
 
-init_fuck() {
-  eval $(thefuck --alias)
+setup_fuck() {
+  init_fuck() {
+    eval $(thefuck --alias)
+  }
+  lazy fuck init_fuck
+
+  fuck-command-line() {
+      local FUCK="$(THEFUCK_REQUIRE_CONFIRMATION=0 thefuck $(fc -ln -1 | tail -n 1) 2> /dev/null)"
+      [[ -z $FUCK ]] && echo -n -e "\a" && return
+      BUFFER=$FUCK
+      zle end-of-line
+  }
+
+  # Bind Esc-Esc to fuck.
+  zle -N fuck-command-line
+  bindkey -M emacs '\e\e' fuck-command-line
+  bindkey -M vicmd '\e\e' fuck-command-line
+  bindkey -M viins '\e\e' fuck-command-line
 }
-lazy fuck init_fuck
+
+setup_fuck
 
 setup_fzf() {
   local FD_COMMAND="fd --hidden --exclude .git --exclude node_modules"
@@ -67,4 +84,4 @@ setup_fzf() {
 
 setup_fzf
 
-unset -f setup_fzf lazy
+unset -f setup_fuck setup_fzf lazy
