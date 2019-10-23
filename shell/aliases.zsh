@@ -6,7 +6,11 @@ alias batpkg="bat package.json"
 alias dot="cd ~/.dotfiles"
 alias weather="curl v2.wttr.in"
 
-# Augments man by adding colors and handling shell builtins.
+# By default man shows the `builtin` page when looking for any shell builtin
+# such as cd or alias, which is not very useful by itself. This function
+# augments man to open the bash manual and scroll to the relevant section when
+# searching for builtins.
+# It also makes man prettier.
 man() {
   local COLORS="LESS_TERMCAP_mb=$'\E[1;31m' \
     LESS_TERMCAP_md=$'\E[1;36m' \
@@ -16,12 +20,29 @@ man() {
     LESS_TERMCAP_us=$'\E[1;32m' \
     LESS_TERMCAP_ue=$'\E[0m'"
 
-  for argument in "$@"; do
-    # If argument's man page resolves to the location for builtins,
-    if [ "$(command man --path -- "$1")" "==" "$(command man --path "builtin")" ]; then
-      # opens the builtins man page and searches for the first occurrence of
-      # the command with paragraph-like indentation.
-      eval "command man zshbuiltins | $COLORS less -p '^       $1 '"
+  # If there are no arguments or any option arguments forward them to man and
+  # exit early.
+  if [[ $# == 0 ]]; then
+    eval "command man"
+    return
+  fi
+  for argument; do
+    if [[ $argument =~ "^-" ]]; then
+      eval "$COLORS command man $@"
+      return
+    fi
+  done
+
+  for argument; do
+    local man_path="$(command man --path -- "$argument")"
+    # Skip argument if man could not find page.
+    if [[ $man_path == "" ]] continue
+
+    # If argument's man page resolves to the same path as builtins, except if
+    # argument is "builtin" or "builtins", open bash man page and scroll to the
+    # relevant section.
+    if [[ ! ($argument =~ "^builtins?$") && $man_path == "/usr/share/man/man1/builtin.1" ]]; then
+      eval "command man bash | $COLORS less -p '^       $argument '"
     else
       eval "$COLORS command man -- '$argument'"
     fi
