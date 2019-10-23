@@ -44,8 +44,10 @@ if ! [ -e "$HOME/.oh-my-zsh" ]; then
 fi
 
 : "${ZSH_CUSTOM:="$HOME/.oh-my-zsh/custom"}"
-# Install powerlevel10k theme
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+# Check if powerlevel10k is installed
+if ! [ -e "$ZSH_CUSTOM/themes/powerlevel10k" ]; then
+  git clone https://github.com/romkatv/powerlevel10k.git "$ZSH_CUSTOM/themes/powerlevel10k"
+fi
 
 ZSH_PLUGINS=(
   zsh-users/zsh-autosuggestions
