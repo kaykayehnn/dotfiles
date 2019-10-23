@@ -5,6 +5,7 @@
 export EDITOR="micro"
 export LANG="en_US.UTF-8"
 export PATH="/usr/local/opt/ruby/bin:$HOME/.gem/bin:$PATH"
+TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
