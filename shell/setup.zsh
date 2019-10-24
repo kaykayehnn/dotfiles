@@ -15,27 +15,8 @@ if [ -f /usr/local/share/zsh/site-functions/_git ]; then
   rm -f /usr/local/share/zsh/site-functions/_git
 fi
 
-# Helper to lazy load time-consuming commands. This only makes sense for shell
-# functions as other types of executables do not impact login performance.
-lazy() {
-  command=$1
-  init_function=$2
-
-  # After $command is called for the first time, $init_function automatically
-  # overrides this stub definition by defining the real function with the same
-  # name as $command.
-  eval "$command() {
-    eval '$init_function'
-    $command \$@
-    # unset -f '$init_function'
-  }"
-}
-
 setup_fuck() {
-  init_fuck() {
-    eval $(thefuck --alias)
-  }
-  lazy fuck init_fuck
+  alias fuck='unalias fuck && eval $(thefuck --alias) && fuck'
 
   fuck-command-line() {
       local FUCK="$(THEFUCK_REQUIRE_CONFIRMATION=0 thefuck $(fc -ln -1 | tail -n 1) 2> /dev/null)"
@@ -79,4 +60,4 @@ setup_fzf() {
 
 setup_fzf
 
-unset -f setup_fuck setup_fzf lazy
+unset -f setup_fuck setup_fzf
