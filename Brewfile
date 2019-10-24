@@ -34,7 +34,7 @@ brew "mycli"
 brew "mysql", restart_service: :changed
 brew "ncdu"
 brew "neofetch"
-brew "nvm"
+brew "node"
 brew "nyancat"
 brew "pastel"
 brew "pigz"

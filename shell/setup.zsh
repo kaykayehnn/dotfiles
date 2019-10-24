@@ -31,11 +31,6 @@ lazy() {
   }"
 }
 
-init_nvm() {
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh" # This loads nvm
-}
-lazy nvm init_nvm
-
 setup_fuck() {
   init_fuck() {
     eval $(thefuck --alias)
