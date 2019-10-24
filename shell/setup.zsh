@@ -60,4 +60,4 @@ setup_fzf() {
 
 setup_fzf
 
-unset -f setup_fuck fuck-command-line setup_fzf
+unset -f setup_fuck setup_fzf
