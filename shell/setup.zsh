@@ -13,9 +13,6 @@ if [ -f /usr/local/share/zsh/site-functions/_git ]; then
   rm -f /usr/local/share/zsh/site-functions/_git
 fi
 
-# Source z
-source /usr/local/etc/profile.d/z.sh
-
 setup_fuck() {
   alias fuck='unalias fuck && eval $(thefuck --alias) && fuck'
 
@@ -62,4 +59,17 @@ setup_fzf() {
 
 setup_fzf
 
-unset -f setup_fuck setup_fzf
+setup_z() {
+  source /usr/local/etc/profile.d/z.sh
+
+  unalias z
+  # Overrides z to make it interactive when called with no arguments.
+  z() {
+    [ $# -gt 0 ] && _z "$*" && return
+    cd "$(_z -l 2>&1 | fzf --nth 2.. --no-sort --tac | sed 's/^[0-9,.]* *//')"
+  }
+}
+
+setup_z
+
+unset -f setup_fuck setup_fzf setup_z
