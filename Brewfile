@@ -57,6 +57,7 @@ brew "tree"
 brew "vegeta"
 brew "wget"
 brew "yarn"
+brew "z"
 
 # Casks
 cask "alfred"

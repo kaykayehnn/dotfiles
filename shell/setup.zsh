@@ -14,6 +14,9 @@ if [ -f /usr/local/share/zsh/site-functions/_git ]; then
   rm -f /usr/local/share/zsh/site-functions/_git
 fi
 
+# Source z
+source /usr/local/etc/profile.d/z.sh
+
 setup_fuck() {
   alias fuck='unalias fuck && eval $(thefuck --alias) && fuck'
 

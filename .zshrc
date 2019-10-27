@@ -77,7 +77,6 @@ plugins=(
   zsh-autosuggestions
   copyfile
   osx
-  z
   vscode
   zsh-syntax-highlighting
   zsh-completions
