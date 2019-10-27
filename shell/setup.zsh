@@ -43,6 +43,7 @@ setup_fzf() {
   export FZF_CTRL_T_OPTS="--preview '(bat --color=always {} 2> /dev/null || tree -I node_modules -C {})'"
   export FZF_ALT_C_COMMAND="$FD_COMMAND --type d"
   export FZF_ALT_C_OPTS="--preview 'tree -I node_modules -C {}'"
+  export FZF_DEFAULT_OPTS='--height 40%'
 
   # Setup fzf
   # ---------
