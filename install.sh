@@ -9,7 +9,7 @@ if ! command -v brew >/dev/null 2>&1; then
 fi
 
 # Install deps from Brewfile
-brew bundle
+brew bundle --file="$HOME/.dotfiles/Brewfile"
 
 NPM_GLOBAL_PACKAGES=(
   create-react-app
