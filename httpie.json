@@ -5,7 +5,6 @@
         "httpie": "1.0.3"
     },
     "default_options": [
-        "--follow",
         "--style=autumn"
     ]
 }
