@@ -43,7 +43,7 @@ fi
 : "${ZSH_CUSTOM:="$HOME/.oh-my-zsh/custom"}"
 # Check if powerlevel10k is installed
 if ! [ -e "$ZSH_CUSTOM/themes/powerlevel10k" ]; then
-  git clone https://github.com/romkatv/powerlevel10k.git "$ZSH_CUSTOM/themes/powerlevel10k"
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH_CUSTOM/themes/powerlevel10k"
 fi
 
 ZSH_PLUGINS=(
@@ -56,7 +56,7 @@ ZSH_PLUGINS=(
 for plugin in "${ZSH_PLUGINS[@]}"; do
   pluginPath="$ZSH_CUSTOM/plugins/$(basename $plugin)"
   if ! [ -e "$pluginPath" ]; then
-    git clone "https://github.com/$plugin" "$ZSH_CUSTOM/plugins/$(basename $plugin)"
+    git clone --depth=1 "https://github.com/$plugin" "$ZSH_CUSTOM/plugins/$(basename $plugin)"
   fi
 done
 
@@ -64,7 +64,7 @@ done
 # https://github.com/tmux-plugins/tpm/blob/master/docs/automatic_tpm_installation.md
 if ! [ -d "$HOME/.tmux/plugins/tpm" ]; then
   echo "Installing tmux plugins..."
-  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
 
 # Install tmux plugins
