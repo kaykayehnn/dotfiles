@@ -77,7 +77,6 @@ CODE_EXTENSIONS=(
   EditorConfig.EditorConfig
   esbenp.prettier-vscode
   Gruntfuggly.todo-tree
-  jasonnutter.search-node-modules
   johnpapa.vscode-peacock
   msjsdiag.debugger-for-chrome
   PKief.material-icon-theme
