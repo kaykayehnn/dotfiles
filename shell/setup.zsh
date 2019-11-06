@@ -2,7 +2,7 @@
 # Environment variables and setup scripts should be placed here.
 
 export GPG_TTY="$(tty)"
-export BAT_CONFIG_PATH="$HOME/.dotfiles/.batrc"
+export BAT_THEME="GitHub"
 export RIPGREP_CONFIG_PATH="$HOME/.dotfiles/.ripgreprc"
 export GEM_HOME="$HOME/.gem"
 
