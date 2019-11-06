@@ -13,6 +13,9 @@ if [ -f /usr/local/share/zsh/site-functions/_git ]; then
   rm -f /usr/local/share/zsh/site-functions/_git
 fi
 
+# Bind Ctrl-Space to execute current suggestion
+bindkey '^ ' autosuggest-execute
+
 setup_fuck() {
   alias fuck='unalias fuck && eval $(thefuck --alias) && fuck'
 
