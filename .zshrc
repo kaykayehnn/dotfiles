@@ -96,3 +96,8 @@ source $DOTFILES/shell/theme.zsh
 # zsh-completions init
 # This line MUST be run after sourcing OMZ
 autoload -U compinit && compinit
+
+# iterm2_shell_integration
+# The line above is used to prevent the iterm2 shell integration installer
+# from appending its own source script here as it is already handled in
+# shell/setup.zsh.

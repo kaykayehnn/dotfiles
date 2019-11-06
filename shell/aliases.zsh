@@ -17,6 +17,9 @@ alias bcu="brew cask uninstall"
 alias bs="brew search"
 alias bup="brew update && brew upgrade"
 
+alias dark="it2setcolor preset 'Night Owl'"
+alias light="it2setcolor preset 'Night Owl Light'"
+
 # By default man shows the `builtin` page when looking for any shell builtin
 # such as cd or alias, which is not very useful by itself. This function
 # augments man to open the bash manual and scroll to the relevant section when

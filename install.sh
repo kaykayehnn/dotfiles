@@ -96,5 +96,10 @@ for extension in "${CODE_EXTENSIONS[@]}"; do
   /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension "$extension" --force
 done
 
+# Check if iTerm2 shell integration is installed
+if ! [ -e "$HOME/.iterm2" ]; then
+  curl -fsSL https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
+fi
+
 # Update tldr pages
 tldr --update
