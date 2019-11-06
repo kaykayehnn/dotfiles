@@ -3,7 +3,7 @@
 
 CDPATH=".:$HOME:$HOME/projects"
 export GPG_TTY="$(tty)"
-export BAT_THEME="GitHub"
+export BAT_THEME="OneHalfDark"
 export RIPGREP_CONFIG_PATH="$DOTFILES/.ripgreprc"
 export DDGR_COLORS="oFdgxy"
 # ZSH you-should-use plugin

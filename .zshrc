@@ -94,6 +94,8 @@ plugins=(
 # by inlining the plugin before sourcing oh-my-zsh.
 fpath+="$ZSH/custom/plugins/zsh-completions/src"
 
+typeset -g ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6A6A6A'
+
 source $ZSH/oh-my-zsh.sh
 
 # This plugin doesn't follow the naming conventions so zsh cannot load it
