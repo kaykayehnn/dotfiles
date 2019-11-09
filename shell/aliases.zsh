@@ -23,7 +23,7 @@ man() {
   # If there are no arguments or any option arguments forward them to man and
   # exit early.
   if [[ $# == 0 ]]; then
-    eval "command man"
+    command man
     return
   fi
   for argument; do
