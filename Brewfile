@@ -113,4 +113,3 @@ mas "Pages", id: 409201541
 mas "Trello", id: 1278508951
 mas "Unsplash Wallpapers", id: 1284863847
 mas "Wipr", id: 1320666476
-mas "Xcode", id: 497799835
