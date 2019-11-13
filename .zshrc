@@ -82,6 +82,7 @@ plugins=(
   zsh-completions
   yarn
   frontend-search
+  extract
 )
 
 source $ZSH/oh-my-zsh.sh
