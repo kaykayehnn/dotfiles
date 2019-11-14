@@ -26,12 +26,11 @@ typeset -A SYMLINK_MAP=(
   # variable like $HOME, this is the most appropriate path to put such an
   # executable.
   "$DOTFILES_DIR/vscode/vscode-shell.sh" "/usr/local/bin/vscode-shell"
+  # Shell source files
+  "$DOTFILES_DIR/shell/aliases.zsh" "$ZSH_CUSTOM/aliases.zsh"
+  "$DOTFILES_DIR/shell/setup.zsh" "$ZSH_CUSTOM/setup.zsh"
+  "$DOTFILES_DIR/shell/theme.zsh" "$ZSH_CUSTOM/theme.zsh"
 )
-
-# Add zsh custom files
-for filename in $DOTFILES_DIR/shell/*.zsh; do
-    SYMLINK_MAP[$filename]="$ZSH_CUSTOM/$(basename $filename)"
-done
 
 # Exit with 0 if all files linked successfully, with 1 if any of them failed.
 exit_code=0
