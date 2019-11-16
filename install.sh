@@ -37,7 +37,9 @@ gem install "${RUBY_GEMS[@]}"
 # Check if oh-my-zsh is installed
 if ! [ -e "$HOME/.oh-my-zsh" ]; then
   echo "Installing oh-my-zsh..."
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  # RUNZSH=no skips entering zsh after installation to continue executing the
+  # rest of this script.
+  RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
 : "${ZSH_CUSTOM:="$HOME/.oh-my-zsh/custom"}"
