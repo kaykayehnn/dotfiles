@@ -87,6 +87,11 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Source custom shell files
+source ~/.dotfiles/shell/aliases.zsh
+source ~/.dotfiles/shell/setup.zsh
+source ~/.dotfiles/shell/theme.zsh
+
 # zsh-completions init
 # This line MUST be run after sourcing OMZ
 autoload -U compinit && compinit
