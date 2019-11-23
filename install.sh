@@ -16,6 +16,7 @@ NPM_GLOBAL_PACKAGES=(
   fx
   gatsby-cli
   jest
+  live-server
   netlify-cli
   nodemon
   prettier
