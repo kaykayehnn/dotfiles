@@ -67,15 +67,21 @@ for plugin in "${ZSH_PLUGINS[@]}"; do
   fi
 done
 
-# Install tmux plugin manager
-# https://github.com/tmux-plugins/tpm/blob/master/docs/automatic_tpm_installation.md
-if ! [ -d "$HOME/.tmux/plugins/tpm" ]; then
-  echo "Installing tmux plugins..."
-  git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-fi
 
-# Install tmux plugins
-~/.tmux/plugins/tpm/bin/install_plugins
+# Install tmux plugin manager and plugins declared in .tmux.conf.
+# tmux plugin declarations are declared like "set -g @plugin 'plugin-author/plugin-repo'"
+# so the plugin path is the fourth field in the output.
+for plugin in tmux-plugins/tpm $(awk '/@plugin/ { print $4 }' ~/.dotfiles/.tmux.conf | tr -d "'"); do
+  plugin_name="$(basename $plugin)"
+  plugin_directory="$HOME/.tmux/plugins/$plugin_name"
+  if ! [ -d "$plugin_directory" ]; then
+    # Print a loading statement, then overwrite it when cloning has completed.
+    echo "Installing $plugin_name..."
+    git clone --recursive --depth=1 --quiet "https://github.com/$plugin" "$plugin_directory" \
+      && echo -e "\r\e[1KInstalled $plugin_name" \
+      || echo -e "\r\e[1KInstalling $plugin_name failed"
+  fi
+done
 
 CODE_EXTENSIONS=(
   CoenraadS.bracket-pair-colorizer
