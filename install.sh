@@ -23,6 +23,7 @@ NPM_GLOBAL_PACKAGES=(
   serve@^6
   source-map-explorer
   typescript
+  vtop
   webpack-bundle-analyzer
 )
 
