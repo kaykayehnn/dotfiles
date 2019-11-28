@@ -14,7 +14,6 @@
   "editor.smoothScrolling": true,
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
-  "emmet.excludeLanguages": ["javascriptreact", "typescriptreact"],
   "eslint.validate": [
     {
       "language": "javascript",
