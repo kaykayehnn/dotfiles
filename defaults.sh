@@ -7,6 +7,12 @@ defaults write com.apple.screencapture type jpg
 
 killall SystemUIServer
 
+# TODO: maybe this should be in iterm2 branch?
+# Specify the preferences directory
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/iterm2"
+# Tell iTerm2 to use the custom preferences in the directory
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
 # TODO: add hot corners
 
 # TODO: add spaces switching shortcuts
