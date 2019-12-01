@@ -5,6 +5,8 @@ alias ping1="ping 1.1.1.1"
 alias batpkg="bat package.json"
 alias dot="cd ~/.dotfiles"
 alias weather="curl v2.wttr.in"
+# Easier pasting of commands
+alias "$"="eval"
 
 # By default man shows the `builtin` page when looking for any shell builtin
 # such as cd or alias, which is not very useful by itself. This function
