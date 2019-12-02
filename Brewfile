@@ -4,6 +4,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "rigellute/tap"
 
 # sshfs dependes on osxfuse and it is required to be installed first
 cask "osxfuse"
@@ -50,6 +51,7 @@ brew "nyancat"
 brew "pastel"
 brew "pigz"
 brew "pinentry-mac"
+brew "pstree"
 brew "pv"
 brew "ranger"
 # Dependency of tmux-yank
@@ -73,11 +75,13 @@ brew "wget"
 brew "yarn"
 brew "z"
 brew "zstd"
+brew "rigellute/tap/spotify-tui"
 
 cask "alfred"
 cask "atom"
 cask "bettertouchtool"
 cask "betterzip"
+cask "cinebench"
 cask "firefox"
 cask "firefox-developer-edition"
 cask "firefox-nightly"
@@ -110,7 +114,9 @@ cask "visual-studio-code"
 cask "vlc"
 cask "vnc-viewer"
 
+mas "Dato", id: 1470584107
 mas "Keynote", id: 409183694
+mas "Kiwi for Gmail", id: 986304488
 mas "MiniPlay", id: 936243210
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
