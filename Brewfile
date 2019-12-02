@@ -1,4 +1,3 @@
-# Taps
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
@@ -6,7 +5,8 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 
-# Packages
+# sshfs dependes on osxfuse and it is required to be installed first
+cask "osxfuse"
 brew "arp-scan"
 brew "asciinema"
 brew "autossh"
@@ -74,7 +74,6 @@ brew "yarn"
 brew "z"
 brew "zstd"
 
-# Casks
 cask "alfred"
 cask "atom"
 cask "bettertouchtool"
@@ -85,8 +84,8 @@ cask "firefox-nightly"
 cask "flux"
 cask "font-fira-code"
 cask "font-firacode-nerd-font"
-cask "grandperspective"
 cask "google-chrome"
+cask "grandperspective"
 cask "handbrake"
 cask "hex-fiend"
 cask "iina"
@@ -97,7 +96,6 @@ cask "keycastr"
 cask "macs-fan-control"
 cask "mactracker"
 cask "mysqlworkbench"
-cask "osxfuse"
 cask "postman"
 cask "qlcolorcode"
 cask "qlimagesize"
@@ -112,7 +110,6 @@ cask "visual-studio-code"
 cask "vlc"
 cask "vnc-viewer"
 
-# MAS Apps
 mas "Keynote", id: 409183694
 mas "MiniPlay", id: 936243210
 mas "Numbers", id: 409203825
