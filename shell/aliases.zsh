@@ -16,6 +16,16 @@ alias bci="brew cask install"
 alias bs="brew search"
 alias bup="brew update && brew upgrade"
 
+mans() {
+  local command="$1"
+  local query="$2"
+
+  local man_text="$(command man -- "$command")"
+
+  echo "$man_text" | grep "^       $query" && { echo "$man_text" | less -p "^       $query" }
+  echo "$man_text" | grep -- "$query" && { echo "$man_text" | less -p"$query" }
+}
+
 # By default man shows the `builtin` page when looking for any shell builtin
 # such as cd or alias, which is not very useful by itself. This function
 # augments man to open the bash manual and scroll to the relevant section when
@@ -59,7 +69,7 @@ man() {
       # argument is "builtin" or "builtins", open bash man page and scroll to the
       # relevant section.
       if [[ ! ($argument =~ "^builtins?$") && $man_path = "/usr/share/man/man1/builtin.1" ]]; then
-        command man bash | less -p "^       $argument "
+        mans bash "$argument"
       else
         command man -- "$argument"
       fi
