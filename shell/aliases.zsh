@@ -20,39 +20,49 @@ alias bup="brew upgrade && brew upgrade"
 # searching for builtins.
 # It also makes man prettier.
 man() {
-  local COLORS="LESS_TERMCAP_mb=$'\E[1;31m' \
-    LESS_TERMCAP_md=$'\E[1;36m' \
-    LESS_TERMCAP_me=$'\E[0m' \
-    LESS_TERMCAP_so=$'\E[01;44;33m' \
-    LESS_TERMCAP_se=$'\E[0m' \
-    LESS_TERMCAP_us=$'\E[1;32m' \
-    LESS_TERMCAP_ue=$'\E[0m'"
+  # This subshell is used to keep the LESS variables scoped to the function.
+  (
+    export LESS_TERMCAP_mb=$'\E[1;31m'
+    export LESS_TERMCAP_md=$'\E[1;36m'
+    export LESS_TERMCAP_me=$'\E[0m'
+    export LESS_TERMCAP_so=$'\E[01;44;33m'
+    export LESS_TERMCAP_se=$'\E[0m'
+    export LESS_TERMCAP_us=$'\E[1;32m'
+    export LESS_TERMCAP_ue=$'\E[0m'
 
-  # If there are no arguments or any option arguments forward them to man and
-  # exit early.
-  if [[ $# == 0 ]]; then
-    command man
-    return
-  fi
-  for argument; do
-    if [[ $argument =~ "^-" ]]; then
-      eval "$COLORS command man $@"
+    # If there are no arguments or any option arguments forward them to man and
+    # exit early.
+    if [[ $# = 0 ]]; then
+      command man
       return
     fi
-  done
+    for argument; do
+      if [[ $argument =~ "^-" ]]; then
+        command man "$@"
+        return
+      fi
+    done
 
-  for argument; do
-    local man_path="$(command man --path -- "$argument")"
-    # Skip argument if man could not find page.
-    if [[ $man_path == "" ]] continue
+    # The exit code represent whether the last argument exited successfully.
+    local exit_code
+    for argument; do
+      local man_path="$(command man --path -- "$argument")"
+      # Skip argument if man could not find it's page.
+      if [[ "$man_path" = "" ]]; then
+        exit_code=1
+        continue
+      fi
 
-    # If argument's man page resolves to the same path as builtins, except if
-    # argument is "builtin" or "builtins", open bash man page and scroll to the
-    # relevant section.
-    if [[ ! ($argument =~ "^builtins?$") && $man_path == "/usr/share/man/man1/builtin.1" ]]; then
-      eval "command man bash | $COLORS less -p '^       $argument '"
-    else
-      eval "$COLORS command man -- '$argument'"
-    fi
-  done
+      # If argument's man page resolves to the same path as builtins, except if
+      # argument is "builtin" or "builtins", open bash man page and scroll to the
+      # relevant section.
+      if [[ ! ($argument =~ "^builtins?$") && $man_path = "/usr/share/man/man1/builtin.1" ]]; then
+        command man bash | less -p "^       $argument "
+      else
+        command man -- "$argument"
+      fi
+      exit_code=$?
+    done
+    return $exit_code
+  )
 }
