@@ -12,7 +12,7 @@ alias b="brew"
 alias bi="brew install"
 alias bci="brew cask install"
 alias bs="brew search"
-alias bup="brew upgrade && brew upgrade"
+alias bup="brew update && brew upgrade"
 
 # By default man shows the `builtin` page when looking for any shell builtin
 # such as cd or alias, which is not very useful by itself. This function
