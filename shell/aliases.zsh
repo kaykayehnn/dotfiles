@@ -7,6 +7,8 @@ alias dot="cd ~/.dotfiles"
 alias weather="curl v2.wttr.in"
 # Easier pasting of commands
 alias "$"="eval"
+# Common typo
+alias c="cd"
 # Brew aliases
 alias b="brew"
 alias bi="brew install"
