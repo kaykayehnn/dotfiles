@@ -16,12 +16,12 @@ brew bundle --file="$HOME/.dotfiles/Brewfile"
 
 NPM_GLOBAL_PACKAGES=(
   create-react-app
-  fx
   gatsby-cli
   jest
   live-server
   netlify-cli
   nodemon
+  parrotsay
   prettier
   serve@^6
   source-map-explorer
