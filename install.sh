@@ -12,7 +12,7 @@ fi
 brew update
 
 # Install deps from Brewfile
-brew bundle --file="$HOME/.dotfiles/Brewfile"
+brew bundle --file="$DOTFILES/Brewfile"
 
 NPM_GLOBAL_PACKAGES=(
   create-react-app

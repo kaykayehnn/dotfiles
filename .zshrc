@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Variables
+export DOTFILES="$HOME/.dotfiles"
 export EDITOR="micro"
 export LANG="en_US.UTF-8"
 export PATH="/usr/local/opt/ruby/bin:$HOME/.gem/bin:$PATH"
@@ -87,9 +88,9 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Source custom shell files
-source ~/.dotfiles/shell/aliases.zsh
-source ~/.dotfiles/shell/setup.zsh
-source ~/.dotfiles/shell/theme.zsh
+source $DOTFILES/shell/aliases.zsh
+source $DOTFILES/shell/setup.zsh
+source $DOTFILES/shell/theme.zsh
 
 # zsh-completions init
 # This line MUST be run after sourcing OMZ

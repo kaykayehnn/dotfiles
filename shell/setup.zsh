@@ -3,7 +3,7 @@
 
 export GPG_TTY="$(tty)"
 export BAT_THEME="GitHub"
-export RIPGREP_CONFIG_PATH="$HOME/.dotfiles/.ripgreprc"
+export RIPGREP_CONFIG_PATH="$DOTFILES/.ripgreprc"
 export GEM_HOME="$HOME/.gem"
 
 eval "$(hub alias -s)"
