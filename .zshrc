@@ -75,7 +75,6 @@ plugins=(
   git
   web-search
   zsh-autosuggestions
-  copyfile
   osx
   vscode
   zsh-syntax-highlighting
