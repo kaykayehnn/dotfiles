@@ -12,7 +12,9 @@ alias c="cd"
 # Brew aliases
 alias b="brew"
 alias bi="brew install"
+alias bu="brew uninstall"
 alias bci="brew cask install"
+alias bcu="brew cask uninstall"
 alias bs="brew search"
 alias bup="brew update && brew upgrade"
 
