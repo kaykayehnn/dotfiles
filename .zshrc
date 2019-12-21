@@ -91,6 +91,7 @@ source $ZSH/oh-my-zsh.sh
 source $DOTFILES/shell/aliases.zsh
 source $DOTFILES/shell/setup.zsh
 source $DOTFILES/shell/theme.zsh
+[ -e "$DOTFILES/shell/extra.zsh" ] && source "$DOTFILES/shell/extra.zsh"
 
 # zsh-completions init
 # This line MUST be run after sourcing OMZ
