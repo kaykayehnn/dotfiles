@@ -5,8 +5,8 @@ alias ping1="ping 1.1.1.1"
 alias batpkg="bat package.json"
 alias dot="cd $DOTFILES"
 alias weather="curl v2.wttr.in"
-# Easier pasting of commands
-alias "$"="eval"
+# Ignore dollar sign (useful when executing copied commands)
+alias "$"=""
 # Common typo
 alias c="cd"
 # Brew aliases
