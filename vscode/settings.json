@@ -107,7 +107,13 @@
     }
   ],
   "prettier.trailingComma": "es5",
-  "terminal.integrated.shell.osx": "/usr/local/bin/vscode-shell",
+  // There is no way to reference the $HOME path in this config value so we
+  // spawn a helper bash shell to run the actual tmux shell.
+  "terminal.integrated.shell.osx": "/bin/bash",
+  "terminal.integrated.shellArgs.osx": [
+    "-c",
+    "exec $HOME/.dotfiles/vscode/vscode-shell.sh"
+  ],
   "todo-tree.highlights.customHighlight": {
     "FIXME:": {
       "icon": "alert",

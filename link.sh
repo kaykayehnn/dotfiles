@@ -22,10 +22,6 @@ typeset -A SYMLINK_MAP=(
   "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
   "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
   "$DOTFILES/vscode/snippets/" "$HOME/Library/Application Support/Code/User/snippets"
-  # Since vscode's configuration does not support using ~ or providing a
-  # variable like $HOME, this is the most appropriate path to put such an
-  # executable.
-  "$DOTFILES/vscode/vscode-shell.sh" "/usr/local/bin/vscode-shell"
 )
 
 # Exit with 0 if all files linked successfully, with 1 if any of them failed.
