@@ -2,7 +2,6 @@
 
 # Pings Cloudflare's DNS server
 alias ping1="ping 1.1.1.1"
-alias batpkg="bat package.json"
 alias dot="cd $DOTFILES"
 alias weather="curl v2.wttr.in"
 # Ignore dollar sign (useful when executing copied commands)
