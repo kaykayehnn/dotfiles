@@ -2,8 +2,8 @@
 # searching for shortcuts easier (only search for 1 sequence instead of all
 # its permutations).
 
-# open terminal
-# cmd - return : echo $(date) > /Users/Krasimir/.skhd.log
+# Open iTerm
+ctrl + alt - space : open /Applications/iTerm.app
 
 # volume settings
 # TODO: maybe only in spotify app?
