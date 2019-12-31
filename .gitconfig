@@ -1,8 +1,8 @@
 [include]
   # This file is for user-specific settings (name, email, signingkey etc.)
-  path = ~/.dotfiles/git/.gitconfig.local
+  path = ~/.dotfiles/.gitconfig.local
 [core]
-  excludesfile = ~/.dotfiles/git/.gitignore_global
+  excludesfile = ~/.dotfiles/.gitignore_global
   # Use diff-so-fancy in `git diff`
   pager = diff-so-fancy | less --tabs=4 -RFX
 # https://github.com/so-fancy/diff-so-fancy#improved-colors-for-the-highlighted-bits
