@@ -93,6 +93,7 @@ CODE_EXTENSIONS=(
 )
 
 for extension in "${CODE_EXTENSIONS[@]}"; do
+  # Without force vscode does not update already installed extensions
   /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension "$extension" --force
 done
 
