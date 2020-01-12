@@ -4,6 +4,7 @@
 alias ping1="ping 1.1.1.1"
 alias dot="cd $DOTFILES"
 alias weather="curl v2.wttr.in"
+alias ddg="ddgr"
 # Ignore dollar sign (useful when executing copied commands)
 alias "$"=""
 # Common typo
