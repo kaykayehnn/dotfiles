@@ -4,6 +4,7 @@
 export GPG_TTY="$(tty)"
 export BAT_THEME="GitHub"
 export RIPGREP_CONFIG_PATH="$DOTFILES/.ripgreprc"
+export DDGR_COLORS="oFdgxy"
 
 eval "$(hub alias -s)"
 
