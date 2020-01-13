@@ -112,7 +112,7 @@
   "terminal.integrated.shell.osx": "/bin/bash",
   "terminal.integrated.shellArgs.osx": [
     "-c",
-    "exec $HOME/.dotfiles/vscode/vscode-shell.sh"
+    "exec $DOTFILES/vscode/vscode-shell.sh"
   ],
   "todo-tree.highlights.customHighlight": {
     "FIXME:": {
