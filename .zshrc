@@ -82,6 +82,8 @@ plugins=(
   yarn
   frontend-search
   extract
+  docker
+  docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
