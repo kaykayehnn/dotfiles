@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+if [ $# = 0 ]; then
+  >&2 echo "usage: f [fieldN ...]"
+fi
+
+pattern="{ print "
+for arg; do
+  pattern="$pattern \$${arg}"
+done
+pattern="$pattern }"
+
+awk "$pattern" /dev/stdin
