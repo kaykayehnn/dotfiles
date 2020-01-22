@@ -3,7 +3,7 @@
 # installation.
 
 # Set dotfiles dir in case we are running this script for the first time.
-DOTFILES="${DOTFILES:$HOME/.dotfiles}"
+DOTFILES="${DOTFILES:-$HOME/.dotfiles}"
 
 install_shell() {
   # Check if oh-my-zsh is installed

@@ -4,8 +4,8 @@
 # bash.
 
 # Assign default values in case .zshrc has not been sourced (such as during first install).
-: "${DOTFILES:="$HOME/.dotfiles"}"
-: "${ZSH_CUSTOM:="$HOME/.oh-my-zsh/custom"}"
+DOTFILES="${DOTFILES:-$HOME/.dotfiles}"
+ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
 
 # This associative array holds source:target pairs which need to be symlinked.
 typeset -A SYMLINK_MAP=(
