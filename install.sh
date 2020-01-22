@@ -5,9 +5,6 @@
 # Set dotfiles dir in case we are running this script for the first time.
 DOTFILES="${DOTFILES:$HOME/.dotfiles}"
 
-install_shell
-install_packages
-
 install_shell() {
   # Check if oh-my-zsh is installed
   if ! [ -e "$HOME/.oh-my-zsh" ]; then
@@ -111,3 +108,6 @@ install_packages() {
   # Install mkcert's Certificate Authority in the system trust store
   mkcert -install
 }
+
+install_shell
+install_packages
