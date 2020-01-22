@@ -2,6 +2,9 @@
 # This script is idempotent - you can run it at any time to update your
 # installation.
 
+# Set dotfiles dir in case we are running this script for the first time.
+DOTFILES="${DOTFILES:$HOME/.dotfiles}"
+
 # Check if brew is installed
 if ! command -v brew >/dev/null 2>&1; then
   echo "Installing homebrew..."
