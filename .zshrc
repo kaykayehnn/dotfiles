@@ -5,7 +5,7 @@
 export DOTFILES="$HOME/.dotfiles"
 export EDITOR="micro"
 export LANG="en_US.UTF-8"
-export PATH="/usr/local/opt/man-db/libexec/bin:/usr/local/opt/ruby/bin:$HOME/.gem/bin:$PATH"
+export PATH="/usr/local/opt/man-db/libexec/bin:$HOME/.gem/bin:$PATH"
 TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
 # Path to your oh-my-zsh installation.
