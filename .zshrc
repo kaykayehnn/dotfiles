@@ -78,13 +78,19 @@ plugins=(
   osx
   vscode
   zsh-syntax-highlighting
-  zsh-completions
   yarn
   frontend-search
   extract
   docker
   docker-compose
 )
+
+# This is the zsh-completions plugin inlined for better performance. The only
+# thing it does is add its src folder to fpath, however since oh-my-zsh
+# executes compinit before plugins, the plugin's readme suggests running
+# compinit again after sourcing oh-my-zsh. This is redundant and can be avoided
+# by inlining the plugin before sourcing oh-my-zsh.
+fpath+="$ZSH/custom/plugins/zsh-completions/src"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,10 +99,6 @@ source $DOTFILES/shell/aliases.zsh
 source $DOTFILES/shell/setup.zsh
 source $DOTFILES/shell/theme.zsh
 [ -e "$DOTFILES/shell/extra.zsh" ] && source "$DOTFILES/shell/extra.zsh"
-
-# zsh-completions init
-# This line MUST be run after sourcing OMZ
-autoload -U compinit && compinit
 
 # iterm2_shell_integration
 # The line above is used to prevent the iterm2 shell integration installer
