@@ -18,6 +18,9 @@ unset FD_COMMAND
 
 # Wrap git by github's hub wrapper
 alias git=hub
+# Override ls with exa
+alias l="exa -laah"
+alias ls="exa"
 
 # Remove git's completions in favour of zsh's.
 if [ -f /usr/local/share/zsh/site-functions/_git ]; then
