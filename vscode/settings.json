@@ -5,7 +5,9 @@
   "diffEditor.renderSideBySide": false,
   "editor.cursorSurroundingLines": 3,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.fontFamily": "'FuraCode Nerd Font', 'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  // Older versions of Fira Code's patched font were called "FuraCode Nerd Font".
+  // The previous identifier is left to preserve backwards compatibility.
+  "editor.fontFamily": "'FiraCode Nerd Font', 'FuraCode Nerd Font', 'Fira Code', Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
