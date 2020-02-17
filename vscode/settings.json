@@ -3,6 +3,9 @@
   "debug.inlineValues": true,
   "debug.node.autoAttach": "off",
   "diffEditor.renderSideBySide": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
   "editor.cursorSurroundingLines": 3,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   // Older versions of Fira Code's patched font were called "FuraCode Nerd Font".
@@ -16,24 +19,6 @@
   "editor.smoothScrolling": true,
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
-  "eslint.validate": [
-    {
-      "language": "javascript",
-      "autoFix": true
-    },
-    {
-      "language": "javascriptreact",
-      "autoFix": true
-    },
-    {
-      "language": "typescript",
-      "autoFix": true
-    },
-    {
-      "language": "typescriptreact",
-      "autoFix": true
-    }
-  ],
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.sortOrder": "type",
