@@ -77,7 +77,29 @@ setup_z() {
   }
 }
 
+# This function optimizes `eval "$(brew command-not-found-init)"` by sourcing
+# the handler directly. This can improve shell startup performance by multiple
+# seconds as brew itself incurs a huge slowdown to any subcommand.
+setup_command_not_found() {
+  # Get brew's prefix manually instead of executing $(brew --prefix) to improve
+  # performance.
+  local prefix
+  if [[ "$OSTYPE" == "linux-gnu" ]]; then # Linux
+    prefix="/usr/linuxbrew/.linuxbrew"
+  elif [[ "$OSTYPE" == "darwin"* ]]; then # macOS
+    prefix="/usr/local"
+  else
+    return # Unknown OS
+  fi
+
+  BREW_COMMAND_NOT_FOUND_HANDLER="$prefix/Homebrew/Library/Taps/homebrew/homebrew-command-not-found/handler.sh"
+  if [ -f "$BREW_COMMAND_NOT_FOUND_HANDLER" ]; then
+    source "$BREW_COMMAND_NOT_FOUND_HANDLER"
+  fi
+}
+
 setup_fuck
 setup_z
+setup_command_not_found
 
-unset -f setup_fuck setup_z
+unset -f setup_fuck setup_z setup_command_not_found
