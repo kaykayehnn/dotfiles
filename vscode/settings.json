@@ -1,5 +1,4 @@
 {
-  "css.lint.unknownAtRules": "ignore",
   "debug.inlineValues": true,
   "debug.node.autoAttach": "off",
   "diffEditor.renderSideBySide": false,
@@ -22,21 +21,11 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.sortOrder": "type",
-  "files.exclude": {
-    "**/*.scss.d.ts": true
-  },
   "git.confirmSync": false,
   "gitlens.mode.active": "zen",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.validate.enable": false,
   "material-icon-theme.activeIconPack": "react_redux",
-  "material-icon-theme.files.associations": {
-    "*.state.ts": "Redux-Store",
-    "configureStore.ts": "Redux-Store"
-  },
-  "material-icon-theme.folders.associations": {
-    "state": "Redux-Store"
-  },
   "material-icon-theme.folders.color": "#42a5f5",
   "material-icon-theme.hidesExplorerArrows": true,
   "peacock.favoriteColors": [
