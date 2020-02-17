@@ -13,6 +13,7 @@ typeset -A SYMLINK_MAP=(
   "$DOTFILES/.zshrc" "$HOME/.zshrc"
   "$DOTFILES/.myclirc" "$HOME/.myclirc"
   "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
+  "$DOTFILES/.gitignore_global" "$HOME/.config/git/ignore"
   "$DOTFILES/.editorconfig" "$HOME/.editorconfig"
   "$DOTFILES/.tmux.conf" "$HOME/.tmux.conf"
   "$DOTFILES/glances.conf" "/usr/local/etc/glances/glances.conf"
