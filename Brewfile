@@ -7,7 +7,7 @@ tap "homebrew/services"
 tap "rigellute/tap"
 tap "teamookla/speedtest"
 
-# sshfs dependes on osxfuse and it is required to be installed first
+# sshfs depends on osxfuse and it is required to be installed first
 cask "osxfuse"
 brew "arduino-cli"
 brew "arp-scan"
