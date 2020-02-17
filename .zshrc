@@ -98,7 +98,10 @@ source $ZSH/oh-my-zsh.sh
 source $DOTFILES/shell/aliases.zsh
 source $DOTFILES/shell/setup.zsh
 source $DOTFILES/shell/theme.zsh
-[ -e "$DOTFILES/shell/extra.zsh" ] && source "$DOTFILES/shell/extra.zsh"
+# In case extra.zsh does not exist the initial prompt renders an error exit
+# code as this is the last command executed before it. We OR it with true to
+# work around this issue.
+[ -e "$DOTFILES/shell/extra.zsh" ] && source "$DOTFILES/shell/extra.zsh" || true
 
 # iterm2_shell_integration
 # The line above is used to prevent the iterm2 shell integration installer
