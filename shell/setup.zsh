@@ -6,7 +6,8 @@ export BAT_THEME="GitHub"
 export RIPGREP_CONFIG_PATH="$DOTFILES/.ripgreprc"
 export DDGR_COLORS="oFdgxy"
 
-eval "$(hub alias -s)"
+# Wrap git by github's hub wrapper
+alias git=hub
 
 # Remove git's completions in favour of zsh's.
 if [ -f /usr/local/share/zsh/site-functions/_git ]; then
