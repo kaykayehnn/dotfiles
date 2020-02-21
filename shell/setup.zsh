@@ -1,6 +1,7 @@
 # This file is used for setting up shell commands.
 # Environment variables and setup scripts should be placed here.
 
+CDPATH=".:$HOME:$HOME/projects"
 export GPG_TTY="$(tty)"
 export BAT_THEME="GitHub"
 export RIPGREP_CONFIG_PATH="$DOTFILES/.ripgreprc"
