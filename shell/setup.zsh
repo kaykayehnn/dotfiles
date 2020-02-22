@@ -53,8 +53,6 @@ setup_fuck() {
   bindkey -M viins '\e\e' fuck-command-line
 }
 
-setup_fuck
-
 setup_fzf() {
   local FD_COMMAND="fd --hidden --exclude .git --exclude node_modules"
 
@@ -80,8 +78,6 @@ setup_fzf() {
   source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 }
 
-setup_fzf
-
 setup_z() {
   source /usr/local/etc/profile.d/z.sh
 
@@ -93,6 +89,8 @@ setup_z() {
   }
 }
 
+setup_fuck
+setup_fzf
 setup_z
 
 unset -f setup_fuck setup_fzf setup_z
