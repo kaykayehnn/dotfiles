@@ -83,6 +83,7 @@ plugins=(
   extract
   docker
   docker-compose
+  fzf
 )
 
 # This is the zsh-completions plugin inlined for better performance. The only

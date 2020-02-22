@@ -6,6 +6,16 @@ export BAT_THEME="GitHub"
 export RIPGREP_CONFIG_PATH="$DOTFILES/.ripgreprc"
 export DDGR_COLORS="oFdgxy"
 
+# fzf options
+FD_COMMAND="fd --hidden --exclude .git --exclude node_modules"
+export FZF_DEFAULT_COMMAND="$FD_COMMAND --type f"
+export FZF_CTRL_T_COMMAND="$FD_COMMAND"
+export FZF_CTRL_T_OPTS="--preview '(bat --color=always {} 2> /dev/null || tree -I node_modules -C {})'"
+export FZF_ALT_C_COMMAND="$FD_COMMAND --type d"
+export FZF_ALT_C_OPTS="--preview 'tree -I node_modules -C {}'"
+export FZF_DEFAULT_OPTS='--height 40%'
+unset FD_COMMAND
+
 # Wrap git by github's hub wrapper
 alias git=hub
 
@@ -53,31 +63,6 @@ setup_fuck() {
   bindkey -M viins '\e\e' fuck-command-line
 }
 
-setup_fzf() {
-  local FD_COMMAND="fd --hidden --exclude .git --exclude node_modules"
-
-  export FZF_DEFAULT_COMMAND="$FD_COMMAND --type f"
-  export FZF_CTRL_T_COMMAND="$FD_COMMAND"
-  export FZF_CTRL_T_OPTS="--preview '(bat --color=always {} 2> /dev/null || tree -I node_modules -C {})'"
-  export FZF_ALT_C_COMMAND="$FD_COMMAND --type d"
-  export FZF_ALT_C_OPTS="--preview 'tree -I node_modules -C {}'"
-  export FZF_DEFAULT_OPTS='--height 40%'
-
-  # Setup fzf
-  # ---------
-  if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
-    export PATH="${PATH:+${PATH}:}/usr/local/opt/fzf/bin"
-  fi
-
-  # Auto-completion
-  # ---------------
-  [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2>/dev/null
-
-  # Key bindings
-  # ------------
-  source "/usr/local/opt/fzf/shell/key-bindings.zsh"
-}
-
 setup_z() {
   source /usr/local/etc/profile.d/z.sh
 
@@ -90,7 +75,6 @@ setup_z() {
 }
 
 setup_fuck
-setup_fzf
 setup_z
 
-unset -f setup_fuck setup_fzf setup_z
+unset -f setup_fuck setup_z
