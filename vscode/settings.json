@@ -27,7 +27,6 @@
   "javascript.validate.enable": false,
   "material-icon-theme.activeIconPack": "react_redux",
   "material-icon-theme.folders.color": "#42a5f5",
-  "material-icon-theme.hidesExplorerArrows": false,
   "peacock.favoriteColors": [
     {
       "name": "Angular Red",
