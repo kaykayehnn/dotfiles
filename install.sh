@@ -84,7 +84,6 @@ install_packages() {
     EditorConfig.EditorConfig
     esbenp.prettier-vscode
     Gruntfuggly.todo-tree
-    johnpapa.vscode-peacock
     msjsdiag.debugger-for-chrome
     PKief.material-icon-theme
     pnp.polacode
