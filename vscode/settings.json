@@ -26,6 +26,7 @@
   "javascript.validate.enable": false,
   "material-icon-theme.activeIconPack": "react_redux",
   "material-icon-theme.folders.color": "#42a5f5",
+  "search.quickOpen.history.filterSortOrder": "recency",
   // There is no way to reference the $HOME path in this config value so we
   // spawn a helper bash shell to run the actual tmux shell.
   "terminal.integrated.shell.osx": "/bin/bash",
