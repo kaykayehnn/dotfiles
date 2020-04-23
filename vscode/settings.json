@@ -1,6 +1,5 @@
 {
   "debug.inlineValues": true,
-  "debug.node.autoAttach": "off",
   "diffEditor.renderSideBySide": false,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
