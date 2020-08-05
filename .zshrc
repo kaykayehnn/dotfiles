@@ -3,7 +3,7 @@
 
 # Variables
 export DOTFILES="$HOME/.dotfiles"
-export EDITOR="micro"
+export EDITOR="nano"
 export LANG="en_US.UTF-8"
 export PATH="/usr/local/opt/man-db/libexec/bin:$PATH"
 TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'

@@ -16,7 +16,6 @@ typeset -A SYMLINK_MAP=(
   "$DOTFILES/.gitignore_global" "$HOME/.config/git/ignore"
   "$DOTFILES/.tmux.conf" "$HOME/.tmux.conf"
   "$DOTFILES/glances.conf" "/usr/local/etc/glances/glances.conf"
-  "$DOTFILES/micro.json" "$HOME/.config/micro/settings.json"
   "$DOTFILES/httpie.json" "$HOME/.httpie/config.json"
   # VSCode files
   "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
