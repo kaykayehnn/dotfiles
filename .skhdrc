@@ -4,7 +4,7 @@
 
 # Open/focus terminal
 # TODO: use yabai to bypass space-switching animations
-ctrl + alt - space : open /Applications/kitty.app
+alt + cmd - return : open /Applications/kitty.app
 
 # Open System Preferences (0x2B is comma)
 cmd + shift - 0x2B : open "/System/Applications/System Preferences.app"
