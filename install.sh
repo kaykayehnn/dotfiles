@@ -58,43 +58,34 @@ install_packages() {
   # Install deps from Brewfile
   brew bundle --file="$DOTFILES/Brewfile"
 
-  NPM_GLOBAL_PACKAGES=(
-    create-react-app
-    gatsby-cli
-    jest
-    live-server
-    netlify-cli
-    nodemon
-    parrotsay
-    prettier
-    serve@^6
-    source-map-explorer
-    typescript
-    vtop
-    webpack-bundle-analyzer
-  )
-
   # Install npm packages
-  yarn global add ${NPM_GLOBAL_PACKAGES[@]}
+  yarn global add create-react-app \
+    gatsby-cli \
+    jest \
+    live-server \
+    netlify-cli \
+    nodemon \
+    parrotsay \
+    prettier \
+    serve@^6 \
+    source-map-explorer \
+    typescript \
+    vtop \
+    webpack-bundle-analyzer
 
-  CODE_EXTENSIONS=(
-    CoenraadS.bracket-pair-colorizer
-    dbaeumer.vscode-eslint
-    eamodio.gitlens
-    EditorConfig.EditorConfig
-    esbenp.prettier-vscode
-    Gruntfuggly.todo-tree
-    msjsdiag.debugger-for-chrome
-    PKief.material-icon-theme
-    pnp.polacode
-    sdras.night-owl
-    VisualStudioExptTeam.vscodeintellicode
-  )
-
-  for extension in "${CODE_EXTENSIONS[@]}"; do
-    # Without force vscode does not update already installed extensions
-    /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension "$extension" --force
-  done
+  # Install vscode extensions
+  # Without force vscode does not update already installed extensions
+  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension CoenraadS.bracket-pair-colorizer --force
+  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dbaeumer.vscode-eslint --force
+  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension eamodio.gitlens --force
+  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension EditorConfig.EditorConfig --force
+  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension esbenp.prettier-vscode --force
+  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension Gruntfuggly.todo-tree --force
+  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension msjsdiag.debugger-for-chrome --force
+  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension PKief.material-icon-theme --force
+  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension pnp.polacode --force
+  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension sdras.night-owl --force
+  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension VisualStudioExptTeam.vscodeintellicode --force
 
   # Check if iTerm2 shell integration is installed
   if ! [ -e "$HOME/.iterm2" ]; then
