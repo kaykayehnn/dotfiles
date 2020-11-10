@@ -14,7 +14,6 @@ typeset -A SYMLINK_MAP=(
   "$DOTFILES/.myclirc" "$HOME/.myclirc"
   "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
   "$DOTFILES/.gitignore_global" "$HOME/.config/git/ignore"
-  "$DOTFILES/.editorconfig" "$HOME/.editorconfig"
   "$DOTFILES/.tmux.conf" "$HOME/.tmux.conf"
   "$DOTFILES/glances.conf" "/usr/local/etc/glances/glances.conf"
   "$DOTFILES/micro.json" "$HOME/.config/micro/settings.json"
