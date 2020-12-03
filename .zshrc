@@ -84,6 +84,7 @@ plugins=(
   docker
   docker-compose
   fzf
+  # zsh-you-should-use
 )
 
 # This is the zsh-completions plugin inlined for better performance. The only
@@ -94,6 +95,10 @@ plugins=(
 fpath+="$ZSH/custom/plugins/zsh-completions/src"
 
 source $ZSH/oh-my-zsh.sh
+
+# This plugin doesn't follow the naming conventions so zsh cannot load it
+# automatically.
+source $ZSH_CUSTOM/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 
 # Source custom shell files
 source $DOTFILES/shell/aliases.zsh

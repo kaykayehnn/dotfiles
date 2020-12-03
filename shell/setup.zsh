@@ -6,6 +6,9 @@ export GPG_TTY="$(tty)"
 export BAT_THEME="GitHub"
 export RIPGREP_CONFIG_PATH="$DOTFILES/.ripgreprc"
 export DDGR_COLORS="oFdgxy"
+# ZSH you-should-use plugin
+export YSU_MESSAGE_POSITION="after"
+export YSU_IGNORED_ALIASES=("g" "c")
 
 # fzf options
 FD_COMMAND="fd --hidden --exclude .git --exclude node_modules"
