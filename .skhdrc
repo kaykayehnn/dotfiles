@@ -16,8 +16,10 @@ cmd + shift - 0x2B : open "/System/Applications/System Preferences.app"
 sound_up   -> : spotify vol up 5 > /Users/Krasimir/.skhd.log
 sound_down -> : spotify vol down 5 > /Users/Krasimir/.skhd.log
 
-# TODO: add open finder shortcut
-alt + cmd - n : open /System/Library/CoreServices/Finder.app
+# Autofill is mapped to shift + cmd + l in bitwarden but Safari's shift + cmd + a
+# is more comfortable to do one handed.
+# Unfortunately firefox has this mapped to useless add-on manager
+# shift + cmd - a : skhd -k "shift + cmd - l"
 
 # focus window
 alt - h : yabai -m window --focus west
@@ -37,7 +39,8 @@ shift + alt - l : yabai -m window --swap east || yabai -m window --swap west
 shift + cmd - j : yabai -m window --warp south
 # interferes with delete line in vscode
 # shift + cmd - k : yabai -m window --warp north
-shift + cmd - l : yabai -m window --warp east
+# Autofill bitwarden
+#shift + cmd - l : yabai -m window --warp east
 
 # balance size of windows
 shift + alt - 0 : yabai -m space --balance

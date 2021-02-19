@@ -8,5 +8,44 @@
     "prefix": "clog",
     "body": ["console.log($0)"],
     "description": "Log to console"
+  },
+  "React Component": {
+    "prefix": "jsx",
+    "body": [
+      "/** @jsx jsx */",
+      "import { jsx, css } from \"@emotion/react\";",
+      "import React from \"react\";",
+      "",
+      "export interface ${TM_FILENAME_BASE}Props {",
+      // This is just so the brackets don't collapse automatically.
+      "  //",
+      "}",
+      "",
+      // There could be made an argument for default exports but it doesn't
+      // matter that much and named have some minor advantages when renaming
+      // or adding additional exports.
+      "export const $TM_FILENAME_BASE: React.FC<${TM_FILENAME_BASE}Props> = function (props) {",
+      "  return ${1:<h1>Hello from $TM_FILENAME_BASE</h1>}$0;",
+      "};",
+      ""
+    ],
+    "description": "React Component base"
+  },
+  "Css Prop": {
+    "prefix": "css",
+    "body": ["css={css`", "  $0;", "`}"]
+  },
+  "Non-exported Component": {
+    "prefix": "comp",
+    "body": [
+      "interface $1Props {",
+      // This is just so the brackets don't collapse automatically.
+      "  //",
+      "}",
+      "",
+      "const $1: React.FC<${1}Props> = function (props) {",
+      "  return ${2:<h1>Hello from $1</h1>}$0;",
+      "};"
+    ]
   }
 }
