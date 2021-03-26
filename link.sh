@@ -7,6 +7,22 @@
 DOTFILES="${DOTFILES:-$HOME/.dotfiles}"
 ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
 
+VSCODE_ROOT=""
+GLANCES_ROOT=""
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  GLANCES_ROOT="$HOME/.config/glances"
+  VSCODE_ROOT="$HOME/.config/VSCodium"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  GLANCES_ROOT="/usr/local/etc/glances"
+  VSCODE_ROOT="$HOME/Library/Application Support/Code"
+else
+  echo "Unknown OS $OSTYPE, aborting"
+  exit 1
+        # Unknown.
+fi
+
+
 # This associative array holds source:target pairs which need to be symlinked.
 typeset -A SYMLINK_MAP=(
   # RC files
@@ -17,9 +33,9 @@ typeset -A SYMLINK_MAP=(
   "$DOTFILES/.tmux.conf" "$HOME/.tmux.conf"
   "$DOTFILES/httpie.json" "$HOME/.httpie/config.json"
   # VSCode files
-  "$DOTFILES/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
-  "$DOTFILES/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
-  "$DOTFILES/vscode/snippets/" "$HOME/Library/Application Support/Code/User/snippets"
+  "$DOTFILES/vscode/settings.json" "$VSCODE_ROOT/User/settings.json"
+  "$DOTFILES/vscode/keybindings.json" "$VSCODE_ROOT/User/keybindings.json"
+  "$DOTFILES/vscode/snippets/" "$VSCODE_ROOT/User/snippets"
 )
 
 # Exit with 0 if all files linked successfully, with 1 if any of them failed.
