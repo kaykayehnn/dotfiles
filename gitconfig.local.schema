@@ -1,0 +1,7 @@
+[user]
+  name = John Smith
+  email = johnsmith@example.com
+  signingkey = signature
+
+[commit]
+  gpgsign = boolean
