@@ -74,19 +74,31 @@ install_packages() {
     vtop \
     webpack-bundle-analyzer
 
+  code_fallback() {
+    if command -v code &> /dev/null
+    then
+      code "$@"
+    elif command -v codium &> /dev/null
+      codium "$@"
+    # macOS before being linked to PATH
+    elif /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code &> /dev/null
+      /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code "$@"
+    fi
+  }
+  
   # Install vscode extensions
   # Without force vscode does not update already installed extensions
-  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension CoenraadS.bracket-pair-colorizer --force
-  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension dbaeumer.vscode-eslint --force
-  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension eamodio.gitlens --force
-  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension EditorConfig.EditorConfig --force
-  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension esbenp.prettier-vscode --force
-  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension Gruntfuggly.todo-tree --force
-  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension msjsdiag.debugger-for-chrome --force
-  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension PKief.material-icon-theme --force
-  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension pnp.polacode --force
-  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension sdras.night-owl --force
-  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension VisualStudioExptTeam.vscodeintellicode --force
+  code_fallback --install-extension CoenraadS.bracket-pair-colorizer --force
+  code_fallback --install-extension dbaeumer.vscode-eslint --force
+  code_fallback --install-extension eamodio.gitlens --force
+  code_fallback --install-extension EditorConfig.EditorConfig --force
+  code_fallback --install-extension esbenp.prettier-vscode --force
+  code_fallback --install-extension Gruntfuggly.todo-tree --force
+  code_fallback --install-extension msjsdiag.debugger-for-chrome --force
+  code_fallback --install-extension PKief.material-icon-theme --force
+  code_fallback --install-extension pnp.polacode --force
+  code_fallback --install-extension sdras.night-owl --force
+  code_fallback --install-extension VisualStudioExptTeam.vscodeintellicode --force
 
   # Check if iTerm2 shell integration is installed
   if ! [ -e "$HOME/.iterm2" ]; then
