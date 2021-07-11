@@ -62,7 +62,7 @@ install_packages() {
   yarn global add create-react-app \
     gatsby-cli \
     jest \
-    live-server \
+    kaykayehnn/live-server#fix-crash-loading-config \
     netlify-cli \
     nodemon \
     parrotsay \
