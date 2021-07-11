@@ -1,6 +1,10 @@
 [include]
   # This file is for user-specific settings (name, email, signingkey etc.)
   path = ~/.dotfiles/.gitconfig.local
+
+[init]
+	defaultBranch = main
+
 [core]
   # Use diff-so-fancy in `git diff`
   pager = diff-so-fancy | less --tabs=4 -RFX
