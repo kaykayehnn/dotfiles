@@ -99,10 +99,11 @@ install_packages() {
   code_fallback() {
     if command -v code &> /dev/null; then
       code "$@"
-    elif command -v codium &> /dev/null; then
+    fi
+    if command -v codium &> /dev/null; then
       codium "$@"
     # macOS before being linked to PATH
-    elif /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code &> /dev/null; then
+    if /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code &> /dev/null; then
       /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code "$@"
     fi
   }
