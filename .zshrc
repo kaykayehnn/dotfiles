@@ -84,7 +84,6 @@ plugins=(
   docker
   docker-compose
   fzf
-  # zsh-you-should-use
 )
 
 # This is the zsh-completions plugin inlined for better performance. The only
