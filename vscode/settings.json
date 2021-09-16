@@ -6,6 +6,9 @@
   },
   "editor.cursorSurroundingLines": 3,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  },
   // Older versions of Fira Code's patched font were called "FuraCode Nerd Font".
   // The previous identifier is left to preserve backwards compatibility.
   "editor.fontFamily": "'FiraCode Nerd Font', 'FuraCode Nerd Font', 'Fira Code', Menlo, Monaco, 'Courier New', monospace",
@@ -32,7 +35,12 @@
   "terminal.integrated.shell.osx": "/bin/bash",
   "terminal.integrated.shellArgs.osx": [
     "-c",
-    "exec $DOTFILES/vscode/vscode-shell.sh"
+    "exec ${DOTFILES:-$HOME/.dotfiles}/vscode/vscode-shell.sh"
+  ],
+  "terminal.integrated.shell.linux": "/bin/bash",
+  "terminal.integrated.shellArgs.linux": [
+    "-c",
+    "exec ${DOTFILES:-$HOME/.dotfiles}/vscode/vscode-shell.sh"
   ],
   "todo-tree.highlights.customHighlight": {
     "FIXME:": {
@@ -59,5 +67,9 @@
   "workbench.colorTheme": "Night Owl (No Italics)",
   "workbench.editor.openPositioning": "first",
   "workbench.iconTheme": "material-icon-theme",
-  "zenMode.centerLayout": false
+  "zenMode.centerLayout": false,
+  "telemetry.enableTelemetry": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
 }
