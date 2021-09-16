@@ -75,13 +75,12 @@ install_packages() {
     webpack-bundle-analyzer
 
   code_fallback() {
-    if command -v code &> /dev/null
-    then
+    if command -v code &> /dev/null; then
       code "$@"
-    elif command -v codium &> /dev/null
+    elif command -v codium &> /dev/null; then
       codium "$@"
     # macOS before being linked to PATH
-    elif /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code &> /dev/null
+    elif /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code &> /dev/null; then
       /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code "$@"
     fi
   }
