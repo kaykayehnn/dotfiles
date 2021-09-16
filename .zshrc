@@ -111,8 +111,3 @@ source $ZSH_CUSTOM/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 # code as this is the last command executed before it. We OR it with true to
 # work around this issue.
 [ -e "$DOTFILES/shell/extra.zsh" ] && source "$DOTFILES/shell/extra.zsh" || true
-
-# iterm2_shell_integration
-# The line above is used to prevent the iterm2 shell integration installer
-# from appending its own source script here as it is already handled in
-# shell/setup.zsh.

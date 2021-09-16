@@ -104,11 +104,6 @@ install_packages() {
   code_fallback --install-extension sdras.night-owl --force
   code_fallback --install-extension VisualStudioExptTeam.vscodeintellicode --force
 
-  # Check if iTerm2 shell integration is installed
-  if ! [ -e "$HOME/.iterm2" ]; then
-    curl -fsSL https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
-  fi
-
   # Update tldr pages
   tldr --update
 

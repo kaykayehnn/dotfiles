@@ -46,9 +46,6 @@ fi
 # Bind Ctrl-Space to execute current suggestion
 bindkey '^ ' autosuggest-execute
 
-# Setup iterm2 shell integration if it is installed.
-[ -e "$HOME/.iterm2_shell_integration.zsh" ] && source "$HOME/.iterm2_shell_integration.zsh"
-
 setup_fuck() {
   # Inline `thefuck --alias` to improve performance.
   fuck () {
