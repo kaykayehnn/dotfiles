@@ -84,6 +84,7 @@ plugins=(
   docker
   docker-compose
   fzf
+  z
 )
 
 # This is the zsh-completions plugin inlined for better performance. The only
@@ -95,16 +96,17 @@ fpath+="$ZSH/custom/plugins/zsh-completions/src"
 
 typeset -g ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6A6A6A'
 
+# Source custom shell files before zsh to be able to make override.
+source $DOTFILES/shell/aliases.zsh
+source $DOTFILES/shell/setup.zsh
+source $DOTFILES/shell/theme.zsh
+
 source $ZSH/oh-my-zsh.sh
 
 # This plugin doesn't follow the naming conventions so zsh cannot load it
 # automatically.
 source $ZSH_CUSTOM/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 
-# Source custom shell files
-source $DOTFILES/shell/aliases.zsh
-source $DOTFILES/shell/setup.zsh
-source $DOTFILES/shell/theme.zsh
 # In case extra.zsh does not exist the initial prompt renders an error exit
 # code as this is the last command executed before it. We OR it with true to
 # work around this issue.
