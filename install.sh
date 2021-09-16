@@ -47,17 +47,39 @@ install_shell() {
 }
 
 install_packages() {
-  # Check if brew is installed
-  if ! command -v brew >/dev/null 2>&1; then
-    echo "Installing homebrew..."
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    . /etc/os-release
+    if [[ "$NAME" == "Manjaro Linux" ]]; then
+      # TODO: install yay and setup pacman
+      yay -S --needed neofetch tmux tealdeer ntfs-3g xclip vscodium-bin \
+        vscodium-bin-marketplace kitty fzf exa hub nerd-fonts-fira-code \
+        firefox-developer-edition thefuck pv gnu-netcat yarn nmap bat \
+        libreoffice-still autossh gparted postman-bin plymouth notepadqq \
+        plymouth-theme-manjaro ripgrep wakeonlan ncdu glances bashtop \
+        discord sublime-text2 networkmanager-openvpn trash-cli tigervnc \
+        dotnet-runtime dotnet-sdk visual-studio-code-bin rider docker spotify \
+        signal-desktop nvme-cli obs-studio pinta kmag orca fd unrar httpie \
+        copyq nnn youtube-dl git-delta chromium dog doge marktext lazygit \
+        krusader dust bottom duf docker-compose cpufetch-git nmon awesome \
+        autokey-qt nextcloud-client
+    fi
+  elif [[ "$OSTYPE" == "darwin"* ]]; then
+    # Check if brew is installed
+    if ! command -v brew >/dev/null 2>&1; then
+      echo "Installing homebrew..."
+      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    fi
+
+    # Pull latest tap repositories
+    brew update
+
+    # Install deps from Brewfile
+    brew bundle --file="$DOTFILES/Brewfile"
+  else
+    echo "Unknown OS $OSTYPE, aborting"
+    exit 1
+          # Unknown.
   fi
-
-  # Pull latest tap repositories
-  brew update
-
-  # Install deps from Brewfile
-  brew bundle --file="$DOTFILES/Brewfile"
 
   # Install npm packages
   yarn global add create-react-app \
