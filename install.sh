@@ -82,19 +82,10 @@ install_packages() {
   fi
 
   # Install npm packages
-  yarn global add create-react-app \
-    gatsby-cli \
-    jest \
-    kaykayehnn/live-server#fix-crash-loading-config \
-    netlify-cli \
+  yarn global add kaykayehnn/live-server#fix-crash-loading-config \
     nodemon \
     parrotsay \
-    prettier \
     serve@^6 \
-    source-map-explorer \
-    typescript \
-    vtop \
-    webpack-bundle-analyzer
 
   code_fallback() {
     if command -v code &> /dev/null; then
