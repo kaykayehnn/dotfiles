@@ -31,6 +31,9 @@ fi
 if command -v exa > /dev/null; then
   alias l="exa -laah"
   alias ls="exa"
+  # We already take care of ls colors, so this prevents oh-my-zsh from
+  # overriding the ls aliases. 
+  DISABLE_LS_COLORS=true
 else
   echo "Exa not installed"
 fi
