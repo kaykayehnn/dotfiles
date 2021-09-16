@@ -12,7 +12,7 @@ GLANCES_ROOT=""
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
   GLANCES_ROOT="$HOME/.config/glances"
-  VSCODE_ROOT="$HOME/.config/VSCodium"
+  VSCODE_ROOT="$HOME/.config/Code"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
   GLANCES_ROOT="/usr/local/etc/glances"
   VSCODE_ROOT="$HOME/Library/Application Support/Code"
