@@ -20,11 +20,20 @@ export FZF_ALT_C_OPTS="--preview 'tree -I node_modules -C {}'"
 export FZF_DEFAULT_OPTS='--height 40%'
 unset FD_COMMAND
 
-# Wrap git by github's hub wrapper
-alias git=hub
-# Override ls with exa
-alias l="exa -laah"
-alias ls="exa"
+# Wrap git by github's hub wrapper if it is installed
+if command -v hub $> /dev/null; then
+  alias git=hub
+else
+  echo "Hub not installed"
+fi
+
+# Override ls with exa if it is installed
+if command -v exa > /dev/null; then
+  alias l="exa -laah"
+  alias ls="exa"
+else
+  echo "Exa not installed"
+fi
 
 # Remove git's completions in favour of zsh's.
 if [ -f /usr/local/share/zsh/site-functions/_git ]; then
