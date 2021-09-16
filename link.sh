@@ -32,6 +32,7 @@ typeset -A SYMLINK_MAP=(
   "$DOTFILES/.gitignore_global" "$HOME/.config/git/ignore"
   "$DOTFILES/.tmux.conf" "$HOME/.tmux.conf"
   "$DOTFILES/httpie.json" "$HOME/.httpie/config.json"
+  "$DOTFILES/kitty.conf" "$HOME/.config/kitty/kitty.conf"
   # VSCode files
   "$DOTFILES/vscode/settings.json" "$VSCODE_ROOT/User/settings.json"
   "$DOTFILES/vscode/keybindings.json" "$VSCODE_ROOT/User/keybindings.json"
