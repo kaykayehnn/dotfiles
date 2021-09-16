@@ -106,9 +106,6 @@ install_packages() {
 
   # Update tldr pages
   tldr --update
-
-  # Install mkcert's Certificate Authority in the system trust store
-  mkcert -install
 }
 
 install_shell
