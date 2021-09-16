@@ -93,7 +93,12 @@ install_packages() {
   code_fallback --install-extension EditorConfig.EditorConfig --force
   code_fallback --install-extension esbenp.prettier-vscode --force
   code_fallback --install-extension Gruntfuggly.todo-tree --force
-  code_fallback --install-extension msjsdiag.debugger-for-chrome --force
+  code_fallback --install-extension jpoissonnier.vscode-styled-components --force
+  code_fallback --install-extension ms-dotnettools.csharp --force
+  code_fallback --install-extension ms-python.python --force
+  code_fallback --install-extension ms-python.vscode-pylance --force
+  code_fallback --install-extension ms-vscode-remote.remote-ssh --force
+  code_fallback --install-extension ms-vscode-remote.remote-ssh-edit --force
   code_fallback --install-extension PKief.material-icon-theme --force
   code_fallback --install-extension pnp.polacode --force
   code_fallback --install-extension sdras.night-owl --force
