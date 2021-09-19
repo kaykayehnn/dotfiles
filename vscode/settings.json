@@ -68,7 +68,9 @@
   "workbench.editor.openPositioning": "first",
   "workbench.iconTheme": "material-icon-theme",
   "zenMode.centerLayout": false,
-  "telemetry.enableTelemetry": false,
+  // Disabling telemetry breaks python extension.
+  // https://github.com/microsoft/vscode-python/issues/14977
+  // "telemetry.enableTelemetry": false,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
   }
