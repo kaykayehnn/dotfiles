@@ -94,7 +94,7 @@ install_packages() {
   else
     echo "Unknown OS $OSTYPE, aborting"
     exit 1
-          # Unknown.
+    # Unknown.
   fi
 
   # Install npm packages
