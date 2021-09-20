@@ -50,8 +50,21 @@ install_packages() {
   if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     . /etc/os-release
     if [[ "$NAME" == "Manjaro Linux" ]]; then
-      # TODO: install yay and setup pacman
-      yay -S --needed neofetch tmux tealdeer ntfs-3g xclip vscodium-bin \
+      # Regenerate mirrorlist
+      # Optional: Move Bulgarian mirrors to the top
+      sudo pacman-mirrors -c Bulgaria && sudo pacman -Syyu
+
+      # Install yay
+      sudo pacman -S --needed git base-devel
+      mkdir ~/clone
+      if ! [ -d ~/clone/yay ]; then
+        git clone https://aur.archlinux.org/yay.git ~/clone/yay
+        cd ~/clone/yay
+        makepkg -si
+      fi
+
+      # Install other packages
+      sudo yay -S --needed neofetch tmux tealdeer ntfs-3g xclip vscodium-bin \
         vscodium-bin-marketplace kitty fzf exa hub nerd-fonts-fira-code \
         firefox-developer-edition thefuck pv gnu-netcat yarn nmap bat \
         libreoffice-still autossh gparted postman-bin plymouth notepadqq \
@@ -62,6 +75,9 @@ install_packages() {
         copyq nnn youtube-dl git-delta chromium dog doge marktext lazygit \
         krusader dust bottom duf docker-compose cpufetch-git nmon awesome \
         autokey-qt nextcloud-client gimp
+
+      # Uninstall stuff
+      sudo pacman -R thunderbird snapd pamac-snap-plugin
     fi
   elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Check if brew is installed
@@ -93,6 +109,7 @@ install_packages() {
     fi
     if command -v codium &> /dev/null; then
       codium "$@"
+    fi
     # macOS before being linked to PATH
     if /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code &> /dev/null; then
       /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code "$@"
