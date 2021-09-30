@@ -17,6 +17,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+# Autostart tmux on terminal startup.
+AUTO_TMUX=true
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -111,3 +114,6 @@ source $ZSH_CUSTOM/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 # code as this is the last command executed before it. We OR it with true to
 # work around this issue.
 [ -e "$DOTFILES/shell/extra.zsh" ] && source "$DOTFILES/shell/extra.zsh" || true
+
+# Run shell post-hooks
+source $DOTFILES/shell/post_hook.zsh
