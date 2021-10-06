@@ -24,9 +24,6 @@ alias bssta="brew services start"
 alias bssto="brew services stop"
 alias bup="brew update && brew upgrade"
 
-alias dark="it2setcolor preset 'Night Owl'"
-alias light="it2setcolor preset 'Night Owl Light'"
-
 alias xclip="xclip -selection clipboard"
 
 # By default man shows the `builtin` page when looking for any shell builtin
