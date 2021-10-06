@@ -74,7 +74,8 @@ install_packages() {
         signal-desktop nvme-cli obs-studio pinta kmag orca fd unrar httpie \
         copyq nnn youtube-dl git-delta chromium dog doge marktext lazygit \
         krusader dust bottom duf docker-compose cpufetch-git nmon awesome \
-        autokey-qt nextcloud-client gimp
+        autokey-qt nextcloud-client gimp mongodb-bin mongodb-tools-bin \
+        mongodb-compass caprine
 
       # Uninstall stuff
       sudo pacman -R thunderbird snapd pamac-snap-plugin
