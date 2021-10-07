@@ -70,6 +70,7 @@
 ##################################
 
 # For information, read the man pages and https://wiki.archlinux.org/title/Mouse_buttons
+# To run xbindkeys on startup, add it to Autostart in KDE settings.
 
 # Go to previous tab in browser
 "xte 'keydown Control_L' 'key Page_Down' 'keyup Control_L'"
