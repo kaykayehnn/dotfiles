@@ -75,7 +75,7 @@ install_packages() {
         copyq nnn youtube-dl git-delta chromium dog doge marktext lazygit \
         krusader dust bottom duf docker-compose cpufetch-git nmon awesome \
         autokey-qt nextcloud-client gimp mongodb-bin mongodb-tools-bin \
-        mongodb-compass caprine
+        mongodb-compass caprine xbindkeys xautomation xorg-xev
 
       # Uninstall stuff
       sudo pacman -R thunderbird snapd pamac-snap-plugin
