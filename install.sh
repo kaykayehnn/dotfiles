@@ -105,7 +105,7 @@ install_packages() {
     yarn global add kaykayehnn/live-server#fix-crash-loading-config \
       nodemon \
       parrotsay \
-      serve@^6 \
+      serve@^6
   fi
 
   code_fallback() {
