@@ -79,6 +79,8 @@ install_packages() {
 
       # Uninstall stuff
       sudo pacman -R thunderbird snapd pamac-snap-plugin
+    elif [[ "$NAME" == "Ubuntu" ]]; then
+      sudo apt install zsh neofetch tmux
     fi
   elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Check if brew is installed
