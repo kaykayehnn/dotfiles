@@ -100,11 +100,13 @@ install_packages() {
     # Unknown.
   fi
 
-  # Install npm packages
-  yarn global add kaykayehnn/live-server#fix-crash-loading-config \
-    nodemon \
-    parrotsay \
-    serve@^6 \
+  # Install npm packages if yarn exists
+  if command -v yarn &> /dev/null; then
+    yarn global add kaykayehnn/live-server#fix-crash-loading-config \
+      nodemon \
+      parrotsay \
+      serve@^6 \
+  fi
 
   code_fallback() {
     if command -v code &> /dev/null; then
@@ -138,8 +140,10 @@ install_packages() {
   code_fallback --install-extension sdras.night-owl --force
   code_fallback --install-extension VisualStudioExptTeam.vscodeintellicode --force
 
-  # Update tldr pages
-  tldr --update
+  # Update tldr pages if tldr is installed
+  if command -v tldr &> /dev/null; then
+    tldr --update
+  fi
 }
 
 install_shell
