@@ -4,8 +4,8 @@
 if [[ "$AUTO_TMUX" == "true" && -z "$TMUX" ]] && command -v tmux &> /dev/null ; then
   # Check if tmux server is running
   if tmux list-sessions &> /dev/null ; then
-    tmux attach-session
+    exec tmux attach-session
   else
-    tmux
+    exec tmux
   fi
 fi
