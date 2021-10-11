@@ -43,6 +43,13 @@ if [ -f /usr/local/share/zsh/site-functions/_git ]; then
   rm -f /usr/local/share/zsh/site-functions/_git
 fi
 
+# Set editor to vscode if installed, otherwise fallback to nano.
+if command -v code > /dev/null; then
+  export EDITOR="code --wait"
+else
+  export EDITOR="nano"
+fi
+
 # Bind Ctrl-Space to execute current suggestion
 bindkey '^ ' autosuggest-execute
 

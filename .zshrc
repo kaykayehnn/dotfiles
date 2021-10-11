@@ -3,7 +3,6 @@
 
 # Variables
 export DOTFILES="$HOME/.dotfiles"
-export EDITOR="code --wait"
 export LANG="en_US.UTF-8"
 export PATH="/usr/local/opt/man-db/libexec/bin:$HOME/.yarn/bin:$PATH"
 TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
