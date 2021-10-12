@@ -2,5 +2,10 @@
   {
     "key": "ctrl+shift+`",
     "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "workbench.action.terminal.paste",
+    "when": "terminalFocus && terminalProcessSupported"
   }
 ]
