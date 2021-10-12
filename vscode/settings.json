@@ -30,18 +30,20 @@
   "material-icon-theme.activeIconPack": "react_redux",
   "material-icon-theme.folders.color": "#42a5f5",
   "search.quickOpen.history.filterSortOrder": "recency",
-  // There is no way to reference the $HOME path in this config value so we
-  // spawn a helper bash shell to run the actual tmux shell.
-  "terminal.integrated.shell.osx": "/bin/bash",
-  "terminal.integrated.shellArgs.osx": [
-    "-c",
-    "exec ${DOTFILES:-$HOME/.dotfiles}/vscode/vscode-shell.sh"
-  ],
-  "terminal.integrated.shell.linux": "/bin/bash",
-  "terminal.integrated.shellArgs.linux": [
-    "-c",
-    "exec ${DOTFILES:-$HOME/.dotfiles}/vscode/vscode-shell.sh"
-  ],
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "zsh",
+      "env": {
+        "AUTO_TMUX": "false"
+      }
+    },
+    "tmux": {
+      "path": "zsh",
+      "icon": "terminal-tmux",
+      "args": ["-c", "exec ${DOTFILES:-$HOME/.dotfiles}/vscode/vscode-shell.sh"]
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "tmux",
   "todo-tree.highlights.customHighlight": {
     "FIXME:": {
       "icon": "alert",
