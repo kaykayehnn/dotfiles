@@ -26,3 +26,6 @@
   # Python's http server is installed by default on macOS, unlike lighttpd
   # (git's default httpd)
   httpd = python
+  
+[rerere]
+	enabled = true
