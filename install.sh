@@ -76,6 +76,9 @@ install_packages() {
         krusader dust bottom duf docker-compose cpufetch-git nmon awesome \
         autokey-qt nextcloud-client gimp mongodb-bin mongodb-tools-bin \
         mongodb-compass caprine xbindkeys xautomation xorg-xev
+      
+      # DBeaver depends on jre11
+      sudo yay -S dbeaver jre11-jdk
 
       # Uninstall stuff
       sudo pacman -R thunderbird snapd pamac-snap-plugin
