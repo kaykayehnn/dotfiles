@@ -27,6 +27,12 @@ alias bup="brew update && brew upgrade"
 alias xclip="xclip -selection clipboard"
 alias open="open-cli"
 
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  # Mirror macOS copy/paste commands
+  alias pbcopy="xclip"
+  alias pbpaste="xclip -o"
+fi
+
 # By default man shows the `builtin` page when looking for any shell builtin
 # such as cd or alias, which is not very useful by itself. This function
 # augments man to open the bash manual and scroll to the relevant section when
