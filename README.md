@@ -3,6 +3,7 @@
 ## Install
 
 - Clone (or fork) this repo
+- Install `zsh` if it is not installed
 - Execute `link.sh`
 - Review `install.sh`
 - Execute `install.sh`
