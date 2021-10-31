@@ -21,9 +21,6 @@ export FZF_ALT_C_OPTS="--preview 'tree -I node_modules -C {}'"
 export FZF_DEFAULT_OPTS='--height 40%'
 unset FD_COMMAND
 
-# Magic-enter plugin options
-MAGIC_ENTER_OTHER_COMMAND='l'
-
 # Tmux plugin options
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOQUIT=false
