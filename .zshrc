@@ -92,6 +92,7 @@ plugins=(
   thefuck
   tmux
   transfer
+  urltools
 )
 
 if [[ "$OSTYPE" == "darwin"* ]]; then # macOS
