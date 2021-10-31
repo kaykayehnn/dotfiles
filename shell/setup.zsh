@@ -21,6 +21,9 @@ export FZF_ALT_C_OPTS="--preview 'tree -I node_modules -C {}'"
 export FZF_DEFAULT_OPTS='--height 40%'
 unset FD_COMMAND
 
+# Magic-enter plugin options
+MAGIC_ENTER_OTHER_COMMAND='l'
+
 # Wrap git by github's hub wrapper if it is installed
 if command -v hub $> /dev/null; then
   alias git=hub

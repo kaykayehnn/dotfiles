@@ -91,6 +91,7 @@ plugins=(
   # https://github.com/kaykayehnn/dotfiles/commit/a2ee11528b079f0d1b324fe224ae90e79f04e582
   colored-man-pages
   command-not-found
+  magic-enter
 )
 
 if [[ "$OSTYPE" == "darwin"* ]]; then # macOS
