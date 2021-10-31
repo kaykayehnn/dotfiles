@@ -85,6 +85,11 @@ plugins=(
   docker-compose
   fzf
   z
+  # TODO: colored-man-pages does not handle some edge cases correctly.
+  # Submit a PR to improve it
+  # See the following commit for reference
+  # https://github.com/kaykayehnn/dotfiles/commit/a2ee11528b079f0d1b324fe224ae90e79f04e582
+  colored-man-pages
 )
 
 if [[ "$OSTYPE" == "darwin"* ]]; then # macOS
