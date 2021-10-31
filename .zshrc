@@ -75,7 +75,8 @@ plugins=(
   zsh-autosuggestions
   vscode
   zsh-syntax-highlighting
-  yarn
+  # Yarn plugin slows startup considerably.
+  # yarn
   extract
   docker
   docker-compose
