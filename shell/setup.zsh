@@ -24,6 +24,10 @@ unset FD_COMMAND
 # Magic-enter plugin options
 MAGIC_ENTER_OTHER_COMMAND='l'
 
+# Tmux plugin options
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOQUIT=false
+
 # Wrap git by github's hub wrapper if it is installed
 if command -v hub $> /dev/null; then
   alias git=hub

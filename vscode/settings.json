@@ -32,10 +32,7 @@
   "search.quickOpen.history.filterSortOrder": "recency",
   "terminal.integrated.profiles.linux": {
     "zsh": {
-      "path": "zsh",
-      "env": {
-        "AUTO_TMUX": "false"
-      }
+      "path": "zsh"
     },
     "tmux": {
       "path": "zsh",

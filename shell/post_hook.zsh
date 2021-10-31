@@ -10,13 +10,3 @@ less_termcap[so]=$'\E[01;44;33m'
 less_termcap[se]=$'\E[0m'
 less_termcap[us]=$'\E[1;32m'
 less_termcap[ue]=$'\E[0m'
-
-# Autostart tmux on terminal startup
-if [[ "$AUTO_TMUX" == "true" && -z "$TMUX" ]] && command -v tmux &> /dev/null ; then
-  # Check if tmux server is running
-  if tmux list-sessions &> /dev/null ; then
-    exec tmux attach-session
-  else
-    exec tmux
-  fi
-fi
