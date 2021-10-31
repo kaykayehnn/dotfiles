@@ -91,6 +91,7 @@ plugins=(
   magic-enter
   thefuck
   tmux
+  transfer
 )
 
 if [[ "$OSTYPE" == "darwin"* ]]; then # macOS
