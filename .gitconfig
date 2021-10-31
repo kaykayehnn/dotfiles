@@ -3,7 +3,7 @@
   path = ~/.dotfiles/.gitconfig.local
 
 [init]
-	defaultBranch = main
+  defaultBranch = main
 
 [instaweb]
   # Python's http server is installed by default on macOS, unlike lighttpd
@@ -11,7 +11,7 @@
   httpd = python
   
 [rerere]
-	enabled = true
+  enabled = true
 
 # Use delta for diff
 # https://github.com/dandavison/delta#configuration
