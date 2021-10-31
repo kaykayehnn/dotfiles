@@ -81,7 +81,6 @@ plugins=(
   vscode
   zsh-syntax-highlighting
   yarn
-  frontend-search
   extract
   docker
   docker-compose
