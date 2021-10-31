@@ -5,6 +5,14 @@
 [init]
 	defaultBranch = main
 
+[instaweb]
+  # Python's http server is installed by default on macOS, unlike lighttpd
+  # (git's default httpd)
+  httpd = python
+  
+[rerere]
+	enabled = true
+
 # Use delta for diff
 # https://github.com/dandavison/delta#configuration
 [pager]
@@ -21,11 +29,3 @@
 
 [interactive]
   diffFilter = delta --color-only
-
-[instaweb]
-  # Python's http server is installed by default on macOS, unlike lighttpd
-  # (git's default httpd)
-  httpd = python
-  
-[rerere]
-	enabled = true
