@@ -4,7 +4,6 @@
 # Variables
 export DOTFILES="$HOME/.dotfiles"
 export LANG="en_US.UTF-8"
-export PATH="/usr/local/opt/man-db/libexec/bin:$HOME/.yarn/bin:$PATH"
 TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
 # Path to your oh-my-zsh installation.
