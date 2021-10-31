@@ -77,7 +77,6 @@ DISABLE_AUTO_TITLE="true"
 plugins=(
   git
   zsh-autosuggestions
-  osx
   vscode
   zsh-syntax-highlighting
   yarn
@@ -87,6 +86,10 @@ plugins=(
   fzf
   z
 )
+
+if [[ "$OSTYPE" == "darwin"* ]]; then # macOS
+  plugins+=osx
+fi
 
 # This is the zsh-completions plugin inlined for better performance. The only
 # thing it does is add its src folder to fpath, however since oh-my-zsh
