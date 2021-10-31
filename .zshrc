@@ -92,6 +92,7 @@ plugins=(
   colored-man-pages
   command-not-found
   magic-enter
+  thefuck
 )
 
 if [[ "$OSTYPE" == "darwin"* ]]; then # macOS
