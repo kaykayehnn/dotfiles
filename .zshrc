@@ -79,7 +79,6 @@ plugins=(
   # yarn
   extract
   docker
-  docker-compose
   fzf
   z
   # TODO: colored-man-pages does not handle some edge cases correctly.
@@ -98,6 +97,10 @@ plugins=(
 if [[ "$OSTYPE" == "darwin"* ]]; then # macOS
   plugins+=osx
 fi
+
+# docker-compose plugin slows startup a little, so we load an optimized
+# version of it.
+source $DOTFILES/shell/docker-compose.plugin.zsh
 
 # This is the zsh-completions plugin inlined for better performance. The only
 # thing it does is add its src folder to fpath, however since oh-my-zsh
