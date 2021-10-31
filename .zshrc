@@ -97,7 +97,7 @@ fpath+="$ZSH/custom/plugins/zsh-completions/src"
 
 typeset -g ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6A6A6A'
 
-# Source custom shell files before zsh to be able to make override.
+# Source custom shell files before zsh to be able to make overrides.
 source $DOTFILES/shell/aliases.zsh
 source $DOTFILES/shell/setup.zsh
 source $DOTFILES/shell/theme.zsh
