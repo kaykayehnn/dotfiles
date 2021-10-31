@@ -48,7 +48,11 @@ install_shell() {
 
 install_packages() {
   if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    # First install packages common for all Linux distros
+    pip3 install spotify-cli-linux
+
     . /etc/os-release
+    # Distro-specific installers
     if [[ "$NAME" == "Manjaro Linux" ]]; then
       # Regenerate mirrorlist
       # Optional: Move Bulgarian mirrors to the top
