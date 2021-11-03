@@ -69,8 +69,11 @@
 # End of xbindkeys configuration #
 ##################################
 
-# For information, read the man pages and https://wiki.archlinux.org/title/Mouse_buttons
+# For reference, read the xbindkeys and xte man pages and
+# https://wiki.archlinux.org/title/Mouse_buttons.
+
 # To run xbindkeys on startup, add it to Autostart in KDE settings.
+# To restart: $ killall xbindkeys; xbindkeys
 
 # Go to previous tab in browser
 "xte 'keydown Control_L' 'key Page_Down' 'keyup Control_L'"
@@ -79,3 +82,11 @@ b:8
 # Go to next tab in browser
 "xte 'keydown Control_L' 'key Page_Up' 'keyup Control_L'"
 b:9
+
+# Go back one page in browser
+"xte 'keydown Alt_L' 'key Left' 'keyup Alt_L'"
+Control + b:8
+
+# Go forward one page in browser
+"xte 'keydown Alt_L' 'key Right' 'keyup Alt_L'"
+Control + b:9
