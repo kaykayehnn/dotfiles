@@ -1,5 +1,6 @@
 {
   "debug.inlineValues": true,
+  "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
