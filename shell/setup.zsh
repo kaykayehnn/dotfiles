@@ -22,7 +22,7 @@ export FZF_DEFAULT_OPTS='--height 40%'
 unset FD_COMMAND
 
 # Tmux plugin options
-ZSH_TMUX_AUTOSTART=true
+# ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOQUIT=false
 
 # Wrap git by github's hub wrapper if it is installed
