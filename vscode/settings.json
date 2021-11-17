@@ -8,7 +8,12 @@
   "editor.cursorSurroundingLines": 3,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[csharp]": {
-    "editor.defaultFormatter": "ms-dotnettools.csharp"
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    // Disable automatic formatting in C#, as it usually create WAY too many
+    // unnecessary conflicts.
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false
   },
   // Older versions of Fira Code's patched font were called "FuraCode Nerd Font".
   // The previous identifier is left to preserve backwards compatibility.
