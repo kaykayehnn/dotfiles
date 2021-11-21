@@ -80,7 +80,7 @@ install_packages() {
         krusader dust bottom duf docker-compose cpufetch-git nmon awesome \
         autokey-qt nextcloud-client gimp mongodb-bin mongodb-tools-bin \
         mongodb-compass caprine xbindkeys xautomation xorg-xev joplin-desktop \
-        tokei jq rpiplay-git
+        tokei jq rpiplay-git torbrowser-launcher
       
       # DBeaver depends on jre11
       sudo yay -S dbeaver jre11-jdk
