@@ -68,7 +68,7 @@ install_packages() {
       fi
 
       # Install other packages
-      sudo yay -S --needed neofetch tmux tealdeer ntfs-3g xclip vscodium-bin \
+      yay -S --needed neofetch tmux tealdeer ntfs-3g xclip vscodium-bin \
         vscodium-bin-marketplace kitty fzf exa hub nerd-fonts-fira-code \
         firefox-developer-edition thefuck pv gnu-netcat yarn nmap bat \
         libreoffice-still autossh gparted postman-bin plymouth notepadqq \
@@ -83,7 +83,7 @@ install_packages() {
         tokei jq rpiplay-git torbrowser-launcher mpv
       
       # DBeaver depends on jre11
-      sudo yay -S dbeaver jre11-jdk
+      yay -S dbeaver jre11-jdk
 
       # Uninstall stuff
       sudo pacman -R thunderbird snapd pamac-snap-plugin
