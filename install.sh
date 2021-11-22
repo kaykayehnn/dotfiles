@@ -83,7 +83,7 @@ install_packages() {
         tokei jq rpiplay-git torbrowser-launcher mpv
       
       # DBeaver depends on jre11
-      yay -S dbeaver jre11-jdk
+      yay -S --needed dbeaver jre11-jdk
 
       # Uninstall stuff
       sudo pacman -R thunderbird snapd pamac-snap-plugin
