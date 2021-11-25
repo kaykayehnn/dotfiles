@@ -86,7 +86,7 @@ install_packages() {
       yay -S --needed dbeaver jre11-jdk
 
       # TODO: maybe add a variable for kernel version?
-      sudo yay -S --needed virtualbox linux510-virtualbox-host-modules
+      yay -S --needed virtualbox linux510-virtualbox-host-modules
 
       # Uninstall stuff
       sudo pacman -R thunderbird snapd pamac-snap-plugin
