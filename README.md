@@ -15,6 +15,8 @@
 ```
 git clone https://github.com/kaykayehnn/dotfiles ~/.dotfiles
 cd ~/.dotfiles
+# Install ZSH in case it is not already installed
+# sudo apt install zsh
 ./link.sh
 ./install.sh
 ```
