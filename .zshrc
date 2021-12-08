@@ -88,12 +88,18 @@ plugins=(
   # https://github.com/kaykayehnn/dotfiles/commit/a2ee11528b079f0d1b324fe224ae90e79f04e582
   colored-man-pages
   command-not-found
-  thefuck
   tmux
   transfer
   urltools
   aws
 )
+
+# TODO: this exists to bypass a log message from thefuck plugin if thefuck is
+# not installed. Make a PR for this
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/thefuck/thefuck.plugin.zsh#L1
+if [[ -z $commands[thefuck] ]]; then
+    plugins+=thefuck
+fi
 
 if [[ "$OSTYPE" == "darwin"* ]]; then # macOS
   plugins+=osx
