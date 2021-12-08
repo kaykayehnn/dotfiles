@@ -92,6 +92,7 @@ plugins=(
   tmux
   transfer
   urltools
+  aws
 )
 
 if [[ "$OSTYPE" == "darwin"* ]]; then # macOS
