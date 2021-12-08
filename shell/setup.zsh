@@ -28,8 +28,6 @@ ZSH_TMUX_AUTOQUIT=false
 # Wrap git by github's hub wrapper if it is installed
 if command -v hub $> /dev/null; then
   alias git=hub
-else
-  echo "Hub not installed"
 fi
 
 # Override ls with exa if it is installed
@@ -39,8 +37,6 @@ if command -v exa > /dev/null; then
   # We already take care of ls colors, so this prevents oh-my-zsh from
   # overriding the ls aliases. 
   DISABLE_LS_COLORS=true
-else
-  echo "Exa not installed"
 fi
 
 # Remove git's completions in favour of zsh's.
