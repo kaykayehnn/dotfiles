@@ -11,7 +11,8 @@ install_shell() {
     echo "Installing oh-my-zsh..."
     # RUNZSH=no skips entering zsh after installation to continue executing the
     # rest of this script.
-    RUNZSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    # KEEP_ZSHRC=yes tells OMZ not to overwrite our .zshrc.
+    RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   fi
 
   : "${ZSH_CUSTOM:="$HOME/.oh-my-zsh/custom"}"
@@ -80,7 +81,12 @@ install_packages() {
         krusader dust bottom duf docker-compose cpufetch-git nmon awesome \
         autokey-qt nextcloud-client gimp mongodb-bin mongodb-tools-bin \
         mongodb-compass caprine xbindkeys xautomation xorg-xev joplin-desktop \
-        tokei jq rpiplay-git torbrowser-launcher mpv kdenlive
+        tokei jq rpiplay-git torbrowser-launcher mpv kdenlive kvantum-qt5 \
+        plasma5-applets-active-window-control latte-dock freetube-bin \
+        # Install browser extension as well https://community.kde.org/Plasma/Browser_Integration
+        plasma-browser-integration \
+        kalendar slack-desktop aws-cli-v2-bin sysbench
+      # Install WhiteSur window decoration theme from KDE
       
       # DBeaver depends on jre11
       yay -S --needed dbeaver jre11-jdk
