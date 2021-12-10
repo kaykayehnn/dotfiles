@@ -12,13 +12,13 @@
 
 **TL;DR**
 
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/kaykayehnn/dotfiles/master/tools/bootstrap.sh)"
+```shell
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/kaykayehnn/dotfiles/master/tools/bootstrap.sh)"
 ```
 
 **TL;DR if you don't like piping into bash**
 
-```
+```shell
 git clone https://github.com/kaykayehnn/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 # Install ZSH in case it is not already installed
