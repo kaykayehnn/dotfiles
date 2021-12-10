@@ -4,7 +4,7 @@
 #   || dccmd='docker-compose'
 
 # Skip checking for docker-CLI plugin to improve performance.
-# Maybe send a PR to add an option for this?
+# TODO: Maybe send a PR to add an option for this?
 dccmd="docker-compose"
 
 alias dco="$dccmd"
