@@ -16,7 +16,7 @@
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/kaykayehnn/dotfiles/master/tools/bootstrap.sh)"
 ```
 
-**TL;DR if you don't like piping into bash**
+**TL;DR if you don't like piping into sh**
 
 ```shell
 git clone https://github.com/kaykayehnn/dotfiles ~/.dotfiles
