@@ -85,7 +85,7 @@ install_packages() {
         plasma5-applets-active-window-control latte-dock freetube-bin \
         # Install browser extension as well https://community.kde.org/Plasma/Browser_Integration
         plasma-browser-integration \
-        kalendar slack-desktop aws-cli-v2-bin sysbench
+        kalendar slack-desktop aws-cli-v2-bin sysbench alacritty
       # Install WhiteSur window decoration theme from KDE
       
       # DBeaver depends on jre11
@@ -162,6 +162,8 @@ install_packages() {
   if command -v tldr &> /dev/null; then
     tldr --update
   fi
+
+  # TODO: setup libinput-gestures
 }
 
 install_shell
