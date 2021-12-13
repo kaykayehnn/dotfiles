@@ -34,6 +34,7 @@ typeset -A SYMLINK_MAP=(
   "$DOTFILES/httpie.json" "$HOME/.httpie/config.json"
   "$DOTFILES/kitty.conf" "$HOME/.config/kitty/kitty.conf"
   "$DOTFILES/.xbindkeysrc" "$HOME/.xbindkeysrc"
+  "$DOTFILES/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
   # VSCode files
   "$DOTFILES/vscode/settings.json" "$VSCODE_ROOT/User/settings.json"
   "$DOTFILES/vscode/keybindings.json" "$VSCODE_ROOT/User/keybindings.json"
