@@ -148,7 +148,7 @@ install_packages() {
   code_fallback --install-extension EditorConfig.EditorConfig --force
   code_fallback --install-extension esbenp.prettier-vscode --force
   code_fallback --install-extension Gruntfuggly.todo-tree --force
-  code_fallback --install-extension jpoissonnier.vscode-styled-components --force
+  code_fallback --install-extension styled-components.vscode-styled-components --force
   code_fallback --install-extension ms-dotnettools.csharp --force
   code_fallback --install-extension ms-python.python --force
   code_fallback --install-extension ms-python.vscode-pylance --force
