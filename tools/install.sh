@@ -158,6 +158,7 @@ install_packages() {
   code_fallback --install-extension pnp.polacode --force
   code_fallback --install-extension sdras.night-owl --force
   code_fallback --install-extension VisualStudioExptTeam.vscodeintellicode --force
+  code_fallback --install-extension ms-azuretools.vscode-docker --force
 
   # Update tldr pages if tldr is installed
   if command -v tldr &> /dev/null; then
