@@ -142,7 +142,6 @@ install_packages() {
   
   # Install vscode extensions
   # Without force vscode does not update already installed extensions
-  code_fallback --install-extension CoenraadS.bracket-pair-colorizer --force
   code_fallback --install-extension dbaeumer.vscode-eslint --force
   code_fallback --install-extension eamodio.gitlens --force
   code_fallback --install-extension EditorConfig.EditorConfig --force
