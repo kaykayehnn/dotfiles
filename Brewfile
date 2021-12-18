@@ -56,8 +56,6 @@ brew "neovim"
 brew "nmap"
 brew "node"
 brew "noti"
-# Required for mkcert to work in Firefox
-brew "nss"
 brew "nyancat"
 brew "osx-cpu-temp"
 brew "pastel"
