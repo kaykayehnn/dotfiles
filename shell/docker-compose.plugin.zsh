@@ -7,6 +7,10 @@
 # TODO: Maybe send a PR to add an option for this?
 dccmd="docker-compose"
 
+# Add docker-compose completions. OMZ does this automatically but for this
+# workaround, we need to do it manually.
+fpath+=($ZSH/plugins/docker-compose)
+
 alias dco="$dccmd"
 alias dcb="$dccmd build"
 alias dce="$dccmd exec"
