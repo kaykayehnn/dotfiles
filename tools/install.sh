@@ -68,6 +68,13 @@ install_packages() {
         makepkg -si
       fi
 
+      # TODO: make this a dictionary, where each package has multiple values
+      # Support:
+      # - package groups (a package depending on another package)
+      # - entries for arch, ubuntu, darwin, etc.
+      # - should we install package on any(or all) of the above platforms
+      # - tags (like optional, fun etc.)
+
       # Install other packages
       yay -S --needed neofetch tmux tealdeer ntfs-3g xclip vscodium-bin \
         vscodium-bin-marketplace kitty fzf exa hub nerd-fonts-fira-code \
