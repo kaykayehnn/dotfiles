@@ -93,7 +93,7 @@ install_packages() {
         # Install browser extension as well https://community.kde.org/Plasma/Browser_Integration
         plasma-browser-integration \
         kalendar slack-desktop aws-cli-v2-bin sysbench alacritty \
-        libinput-gestures autofs cmatrix xorg-xinput
+        libinput-gestures autofs cmatrix xorg-xinput img2pdf ocrmypdf
       # Install WhiteSur window decoration theme from KDE
       
       # DBeaver depends on jre11
