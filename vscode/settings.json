@@ -23,6 +23,9 @@
     "editor.formatOnPaste": false,
     "editor.formatOnSaveMode": "file"
   },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
   // Older versions of Fira Code's patched font were called "FuraCode Nerd Font".
   // The previous identifier is left to preserve backwards compatibility.
   "editor.fontFamily": "'FiraCode Nerd Font', 'FuraCode Nerd Font', 'Fira Code', Menlo, Monaco, 'Courier New', monospace",
