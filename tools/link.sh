@@ -8,13 +8,10 @@ DOTFILES="${DOTFILES:-$HOME/.dotfiles}"
 ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
 
 VSCODE_ROOT=""
-GLANCES_ROOT=""
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  GLANCES_ROOT="$HOME/.config/glances"
   VSCODE_ROOT="$HOME/.config/Code"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-  GLANCES_ROOT="/usr/local/etc/glances"
   VSCODE_ROOT="$HOME/Library/Application Support/Code"
 else
   echo "Unknown OS $OSTYPE, aborting"
