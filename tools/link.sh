@@ -1,7 +1,4 @@
-#!/usr/bin/env zsh
-# The default bash shipped with macOS (3.2) does not support associative
-# arrays. In order to run this this script you need zsh or a newer version of
-# bash.
+#!/usr/bin/env bash
 
 # Assign default values in case .zshrc has not been sourced (such as during first install).
 DOTFILES="${DOTFILES:-$HOME/.dotfiles}"
@@ -20,8 +17,8 @@ else
 fi
 
 
-# This associative array holds source:target pairs which need to be symlinked.
-typeset -A SYMLINK_MAP=(
+# This array holds source:target pairs which need to be symlinked.
+SYMLINK_MAP=(
   # RC files
   "$DOTFILES/.zshrc" "$HOME/.zshrc"
   "$DOTFILES/.myclirc" "$HOME/.myclirc"
@@ -42,8 +39,11 @@ typeset -A SYMLINK_MAP=(
 # Exit with 0 if all files linked successfully, with 1 if any of them failed.
 exit_code=0
 
-for source in "${(@k)SYMLINK_MAP}"; do
-  target="${SYMLINK_MAP[$source]}"
+# Start the for loop at 1 because seq uses <= instead of <. That way we iterate
+# all pairs like so: (0, 1) (2, 3) on an array of length 4.
+for i in $(seq 1 2 ${#SYMLINK_MAP[@]}); do
+  source="${SYMLINK_MAP[$i - 1]}"
+  target="${SYMLINK_MAP[$i]}"
 
   # If target exists
   if [ -e "$target" ]; then
@@ -51,7 +51,7 @@ for source in "${(@k)SYMLINK_MAP}"; do
     if [ -L "$target" ]; then
       targetSource=$(readlink "$target")
       if [ "$source" = "$targetSource" ]; then
-        # It is already linked, do nothing
+        : # It is already linked, do nothing
       else
         exit_code=1
         echo "$source could not be linked because a symbolic link already exists at $target\nThe symbolic link points to $targetSource"
