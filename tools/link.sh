@@ -54,7 +54,8 @@ for i in $(seq 1 2 ${#SYMLINK_MAP[@]}); do
         : # It is already linked, do nothing
       else
         exit_code=1
-        echo "$source could not be linked because a symbolic link already exists at $target\nThe symbolic link points to $targetSource"
+        echo "$source could not be linked because a symbolic link already exists at $target"
+        echo "The symbolic link points to $targetSource"
       fi
 
       continue
