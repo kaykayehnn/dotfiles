@@ -79,7 +79,7 @@
   "todo-tree.general.tags": ["TODO:", "FIXME:"],
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 1,
   "workbench.activityBar.visible": true,
   "workbench.colorTheme": "Night Owl (No Italics)",
   "workbench.editor.openPositioning": "first",
