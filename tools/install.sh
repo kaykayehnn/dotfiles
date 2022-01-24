@@ -2,6 +2,8 @@
 # This script is idempotent - you can run it at any time to update your
 # installation.
 
+set -euo pipefail
+
 # Set dotfiles dir in case we are running this script for the first time.
 DOTFILES="${DOTFILES:-$HOME/.dotfiles}"
 
@@ -30,9 +32,9 @@ install_shell() {
 
   # Install zsh plugins
   for plugin in "${ZSH_PLUGINS[@]}"; do
-    pluginPath="$ZSH_CUSTOM/plugins/$(basename $plugin)"
+    pluginPath="$ZSH_CUSTOM/plugins/$(basename "$plugin")"
     if ! [ -e "$pluginPath" ]; then
-      git clone --depth=1 "https://github.com/$plugin" "$ZSH_CUSTOM/plugins/$(basename $plugin)"
+      git clone --depth=1 "https://github.com/$plugin" "$ZSH_CUSTOM/plugins/$(basename "$plugin")"
     fi
   done
 
@@ -52,6 +54,7 @@ install_packages() {
     # First install packages common for all Linux distros
     pip3 install spotify-cli-linux
 
+    # shellcheck source=/dev/null
     . /etc/os-release
     # Distro-specific installers
     if [[ "$NAME" == "Manjaro Linux" ]]; then
