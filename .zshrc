@@ -119,8 +119,8 @@ fpath+="$ZSH/custom/plugins/zsh-completions/src"
 typeset -g ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6A6A6A'
 
 # Source custom shell files before zsh to be able to make overrides.
-source $DOTFILES/shell/aliases.zsh
-source $DOTFILES/shell/setup.zsh
+source $DOTFILES/shell/aliases.sh
+source $DOTFILES/shell/setup.sh
 source $DOTFILES/shell/theme.zsh
 
 source $ZSH/oh-my-zsh.sh
@@ -129,10 +129,10 @@ source $ZSH/oh-my-zsh.sh
 # automatically.
 source $ZSH_CUSTOM/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 
-# In case extra.zsh does not exist the initial prompt renders an error exit
+# In case extra.sh does not exist the initial prompt renders an error exit
 # code as this is the last command executed before it. We OR it with true to
 # work around this issue.
-[ -e "$DOTFILES/shell/extra.zsh" ] && source "$DOTFILES/shell/extra.zsh" || true
+[ -e "$DOTFILES/shell/extra.sh" ] && source "$DOTFILES/shell/extra.sh" || true
 
 # Run shell post-hooks
-source $DOTFILES/shell/post_hook.zsh
+source $DOTFILES/shell/post_hook.sh
