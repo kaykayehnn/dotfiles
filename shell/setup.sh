@@ -1,7 +1,9 @@
+# shellcheck shell=bash
 # This file is used for setting up shell commands.
 # Environment variables and setup scripts should be placed here.
 
 CDPATH=".:$HOME:$HOME/projects"
+# shellcheck disable=SC2155 # This only applies to non-interactive shells
 export GPG_TTY="$(tty)"
 export BAT_THEME="OneHalfDark"
 export RIPGREP_CONFIG_PATH="$DOTFILES/.ripgreprc"
@@ -22,7 +24,9 @@ export FZF_DEFAULT_OPTS='--height 40%'
 unset FD_COMMAND
 
 # Tmux plugin options
+# shellcheck disable=SC2034 # The variable is used in a zsh plugin
 ZSH_TMUX_AUTOSTART=true
+# shellcheck disable=SC2034 # The variable is used in a zsh plugin
 ZSH_TMUX_AUTOQUIT=false
 
 # Wrap git by github's hub wrapper if it is installed
@@ -35,7 +39,8 @@ if command -v exa > /dev/null; then
   alias l="exa -laah"
   alias ls="exa"
   # We already take care of ls colors, so this prevents oh-my-zsh from
-  # overriding the ls aliases. 
+  # overriding the ls aliases.
+  # shellcheck disable=SC2034 # The variable is used internally in oh-my-zsh
   DISABLE_LS_COLORS=true
 fi
 
@@ -61,6 +66,7 @@ setup_z() {
   # Overrides z to make it interactive when called with no arguments.
   z() {
     [ $# -gt 0 ] && _z "$*" && return
+    # shellcheck disable=SC2164
     cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
   }
 }

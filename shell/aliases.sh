@@ -1,12 +1,13 @@
+# shellcheck shell=bash
 # Put shell aliases and custom functions here.
 
 # Pings Cloudflare's DNS server
 alias ping1="ping 1.1.1.1"
-alias dot="cd $DOTFILES"
+alias dot='cd $DOTFILES'
 alias weather="curl v2.wttr.in"
 alias ddg="ddgr"
 # Ignore dollar sign (useful when executing copied commands)
-alias "$"=""
+alias $=""
 # Common typo
 alias c="cd"
 # Brew aliases

@@ -78,6 +78,14 @@ install_packages() {
       # - should we install package on any(or all) of the above platforms
       # - tags (like optional, fun etc.)
 
+      # Add to pacman.conf
+      # UseSyslog
+      # Color
+      # CheckSpace
+      # VerbosePkgLists
+      # ILoveCandy
+      yay -Y --devel --combinedupgrade --batchinstall --save
+
       # Install other packages
       yay -S --needed neofetch tmux tealdeer ntfs-3g xclip vscodium-bin \
         vscodium-bin-marketplace kitty fzf exa hub nerd-fonts-fira-code \
