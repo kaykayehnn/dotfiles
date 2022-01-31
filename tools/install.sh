@@ -7,49 +7,7 @@ set -euo pipefail
 # Set dotfiles dir in case we are running this script for the first time.
 DOTFILES="${DOTFILES:-$HOME/.dotfiles}"
 
-install_shell() {
-  # Check if oh-my-zsh is installed
-  if ! [ -e "$HOME/.oh-my-zsh" ]; then
-    echo "Installing oh-my-zsh..."
-    # RUNZSH=no skips entering zsh after installation to continue executing the
-    # rest of this script.
-    # KEEP_ZSHRC=yes tells OMZ not to overwrite our .zshrc.
-    RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-  fi
-
-  : "${ZSH_CUSTOM:="$HOME/.oh-my-zsh/custom"}"
-  # Check if powerlevel10k is installed
-  if ! [ -e "$ZSH_CUSTOM/themes/powerlevel10k" ]; then
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH_CUSTOM/themes/powerlevel10k"
-  fi
-
-  ZSH_PLUGINS=(
-    zsh-users/zsh-autosuggestions
-    zsh-users/zsh-syntax-highlighting
-    zsh-users/zsh-completions
-    MichaelAquilina/zsh-you-should-use
-  )
-
-  # Install zsh plugins
-  for plugin in "${ZSH_PLUGINS[@]}"; do
-    pluginPath="$ZSH_CUSTOM/plugins/$(basename "$plugin")"
-    if ! [ -e "$pluginPath" ]; then
-      git clone --depth=1 "https://github.com/$plugin" "$ZSH_CUSTOM/plugins/$(basename "$plugin")"
-    fi
-  done
-
-  # Install tmux plugin manager
-  # https://github.com/tmux-plugins/tpm/blob/master/docs/automatic_tpm_installation.md
-  if ! [ -d "$HOME/.tmux/plugins/tpm" ]; then
-    echo "Installing tmux plugins..."
-    git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-  fi
-
-  # Install tmux plugins
-  ~/.tmux/plugins/tpm/bin/install_plugins
-}
-
-install_packages() {
+main() {
   if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # First install packages common for all Linux distros
     pip3 install spotify-cli-linux
@@ -146,6 +104,46 @@ install_packages() {
       serve@^6
   fi
 
+  # Check if oh-my-zsh is installed
+  if ! [ -e "$HOME/.oh-my-zsh" ]; then
+    echo "Installing oh-my-zsh..."
+    # RUNZSH=no skips entering zsh after installation to continue executing the
+    # rest of this script.
+    # KEEP_ZSHRC=yes tells OMZ not to overwrite our .zshrc.
+    RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  fi
+
+  : "${ZSH_CUSTOM:="$HOME/.oh-my-zsh/custom"}"
+  # Check if powerlevel10k is installed
+  if ! [ -e "$ZSH_CUSTOM/themes/powerlevel10k" ]; then
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH_CUSTOM/themes/powerlevel10k"
+  fi
+
+  ZSH_PLUGINS=(
+    zsh-users/zsh-autosuggestions
+    zsh-users/zsh-syntax-highlighting
+    zsh-users/zsh-completions
+    MichaelAquilina/zsh-you-should-use
+  )
+
+  # Install zsh plugins
+  for plugin in "${ZSH_PLUGINS[@]}"; do
+    pluginPath="$ZSH_CUSTOM/plugins/$(basename "$plugin")"
+    if ! [ -e "$pluginPath" ]; then
+      git clone --depth=1 "https://github.com/$plugin" "$ZSH_CUSTOM/plugins/$(basename "$plugin")"
+    fi
+  done
+
+  # Install tmux plugin manager
+  # https://github.com/tmux-plugins/tpm/blob/master/docs/automatic_tpm_installation.md
+  if ! [ -d "$HOME/.tmux/plugins/tpm" ]; then
+    echo "Installing tmux plugins..."
+    git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  fi
+
+  # Install tmux plugins
+  ~/.tmux/plugins/tpm/bin/install_plugins
+
   code_fallback() {
     if command -v code &> /dev/null; then
       code "$@"
@@ -187,5 +185,4 @@ install_packages() {
   # TODO: setup libinput-gestures
 }
 
-install_shell
-install_packages
+main
