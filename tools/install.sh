@@ -140,12 +140,16 @@ main() {
   # Install tmux plugin manager
   # https://github.com/tmux-plugins/tpm/blob/master/docs/automatic_tpm_installation.md
   if ! [ -d "$HOME/.tmux/plugins/tpm" ]; then
-    echo "Installing tmux plugins..."
+    echo "Installing tmux plugin manager..."
     git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   fi
 
-  # Install tmux plugins
-  ~/.tmux/plugins/tpm/bin/install_plugins
+  # Installing tmux plugins requires tmux server to be running so we set up a
+  # temporary session for install them.
+  tmux new-session -d -s _install-plugins
+  # shellcheck disable=SC2088,SC2242
+  tmux send-keys -t _install-plugins "~/.tmux/plugins/tpm/bin/install_plugins; exit" ENTER
+  tmux attach-session -t _install-plugins
 
   code_fallback() {
     if command -v code &> /dev/null; then
