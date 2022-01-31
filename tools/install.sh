@@ -77,7 +77,10 @@ main() {
     fi
     
     # Install packages common for all Linux distros
-    pip3 install spotify-cli-linux
+    # Only run pip if it is installed
+    if command -v pip3 &> /dev/null; then
+      pip3 install spotify-cli-linux
+    fi
   elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Check if brew is installed
     if ! command -v brew >/dev/null 2>&1; then
