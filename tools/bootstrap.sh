@@ -8,10 +8,16 @@ set -eu
 # Remember we cannot import any scripts here, as this script needs to be
 # pipeable.
 
+# You can set these variables before running the script to configure it based
+# on your needs.
 DOTFILES="${DOTFILES:-$HOME/.dotfiles}"
-BRANCH="${BRANCH:-main}"
+GIT_BRANCH="${BRANCH:-main}"
 
-git clone --depth=1 --branch "$BRANCH" https://github.com/kaykayehnn/dotfiles "$DOTFILES"
+git clone --depth=1 --branch "$GIT_BRANCH" https://github.com/kaykayehnn/dotfiles "$DOTFILES"
+
+# Clear branch so it doesn't interfere with oh-my-zsh's options.
+unset BRANCH
+
 cd "$DOTFILES"
 
 # TODO: check if bash is installed
