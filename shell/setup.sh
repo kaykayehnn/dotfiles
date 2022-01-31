@@ -2,6 +2,10 @@
 # This file is used for setting up shell commands.
 # Environment variables and setup scripts should be placed here.
 
+# Make glob patterns case-insensitive
+setopt extendedglob
+unsetopt CASE_GLOB
+
 CDPATH=".:$HOME:$HOME/projects"
 # shellcheck disable=SC2155 # This only applies to non-interactive shells
 export GPG_TTY="$(tty)"
