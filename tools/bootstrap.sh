@@ -9,7 +9,7 @@ set -eu
 # pipeable.
 
 # You can set these variables before running the script to configure it based
-# on your needs.
+# on your needs. For example: `export BRANCH=dev`
 DOTFILES="${DOTFILES:-$HOME/.dotfiles}"
 GIT_BRANCH="${BRANCH:-main}"
 
