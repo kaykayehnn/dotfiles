@@ -12,8 +12,10 @@
 
 **TL;DR**
 
+Make sure `curl`, `git`, and `zsh` are installed as the scripts depend on them.
+
 ```shell
-$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/kaykayehnn/dotfiles/master/tools/bootstrap.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/kaykayehnn/dotfiles/master/tools/bootstrap.sh)"
 ```
 
 **TL;DR if you don't like piping into sh**
