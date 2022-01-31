@@ -9,9 +9,6 @@ DOTFILES="${DOTFILES:-$HOME/.dotfiles}"
 
 main() {
   if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    # First install packages common for all Linux distros
-    pip3 install spotify-cli-linux
-
     # shellcheck source=/dev/null
     . /etc/os-release
     # Distro-specific installers
@@ -78,6 +75,9 @@ main() {
       sudo apt update
       sudo apt install -y zsh neofetch tmux htop tldr fzf
     fi
+    
+    # Install packages common for all Linux distros
+    pip3 install spotify-cli-linux
   elif [[ "$OSTYPE" == "darwin"* ]]; then
     # Check if brew is installed
     if ! command -v brew >/dev/null 2>&1; then
