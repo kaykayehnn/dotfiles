@@ -9,8 +9,9 @@ set -eu
 # pipeable.
 
 DOTFILES="${DOTFILES:-$HOME/.dotfiles}"
+BRANCH="${BRANCH:-main}"
 
-git clone --depth=1 https://github.com/kaykayehnn/dotfiles "$DOTFILES"
+git clone --depth=1 --branch "$BRANCH" https://github.com/kaykayehnn/dotfiles "$DOTFILES"
 cd "$DOTFILES"
 
 # TODO: check if bash is installed
