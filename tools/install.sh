@@ -73,7 +73,7 @@ main() {
       sudo pacman -R thunderbird snapd pamac-snap-plugin
     elif [[ "$NAME" == "Ubuntu" ]]; then
       sudo apt update
-      sudo apt install -y zsh neofetch tmux htop tldr fzf
+      sudo apt install -y zsh neofetch tmux htop tldr fzf python3
     fi
     
     # Install packages common for all Linux distros
