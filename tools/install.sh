@@ -47,7 +47,7 @@ main() {
         firefox-developer-edition thefuck pv gnu-netcat yarn nmap bat \
         libreoffice-still autossh gparted postman-bin plymouth notepadqq \
         plymouth-theme-manjaro ripgrep wakeonlan ncdu glances bashtop \
-        discord sublime-text2 networkmanager-openvpn trash-cli tigervnc \
+        discord sublime-text4 networkmanager-openvpn trash-cli tigervnc \
         dotnet-runtime dotnet-sdk visual-studio-code-bin rider docker spotify \
         signal-desktop nvme-cli obs-studio pinta kmag orca fd unrar httpie \
         copyq nnn youtube-dl git-delta chromium dog doge marktext lazygit \
