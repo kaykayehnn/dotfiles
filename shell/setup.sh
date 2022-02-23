@@ -27,6 +27,9 @@ export FZF_ALT_C_OPTS="--preview 'tree -I node_modules -C {}'"
 export FZF_DEFAULT_OPTS='--height 40%'
 unset FD_COMMAND
 
+# Use trash-cli with nnn. For gio trash, set to 2
+export NNN_TRASH=1
+
 # Tmux plugin options
 # shellcheck disable=SC2034 # The variable is used in a zsh plugin
 ZSH_TMUX_AUTOSTART=true
