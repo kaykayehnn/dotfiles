@@ -60,7 +60,8 @@ main() {
         plasma-browser-integration \
         kalendar slack-desktop aws-cli-v2-bin sysbench alacritty \
         libinput-gestures autofs cmatrix xorg-xinput img2pdf ocrmypdf glow \
-        shellcheck plex-media-player google-cloud-sdk quick-lookup
+        shellcheck plex-media-player google-cloud-sdk quick-lookup remmina \
+        remmina-plugin-rdesktop
       # Install WhiteSur window decoration theme from KDE
       
       # DBeaver depends on jre11
