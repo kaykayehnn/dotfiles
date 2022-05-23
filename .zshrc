@@ -102,7 +102,7 @@ if ! [[ -z $commands[thefuck] ]]; then
 fi
 
 if [[ "$OSTYPE" == "darwin"* ]]; then # macOS
-  plugins+=osx
+  plugins+=macos
 fi
 
 # docker-compose plugin slows startup a little, so we load an optimized
