@@ -50,6 +50,8 @@
   "python.formatting.provider": "black",
   "search.quickOpen.history.filterSortOrder": "recency",
   "terminal.integrated.fontSize": 13,
+  "terminal.integrated.defaultProfile.osx": "tmux",
+  "terminal.integrated.defaultProfile.linux": "tmux",
   "terminal.integrated.profiles.linux": {
     "zsh": {
       "path": "zsh"
@@ -60,7 +62,16 @@
       "args": ["-c", "exec ${DOTFILES:-$HOME/.dotfiles}/vscode/vscode-shell.sh"]
     }
   },
-  "terminal.integrated.defaultProfile.linux": "tmux",
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "zsh"
+    },
+    "tmux": {
+      "path": "zsh",
+      "icon": "terminal-tmux",
+      "args": ["-c", "exec ${DOTFILES:-$HOME/.dotfiles}/vscode/vscode-shell.sh"]
+    }
+  },
   "todo-tree.highlights.customHighlight": {
     "FIXME:": {
       "icon": "alert",
