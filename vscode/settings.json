@@ -35,6 +35,7 @@
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.gotoLocation.multiple": "goto",
+  "editor.mouseWheelScrollSensitivity": 0.3,
   "editor.smoothScrolling": true,
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
@@ -52,6 +53,7 @@
   "terminal.integrated.fontSize": 13,
   "terminal.integrated.defaultProfile.osx": "tmux",
   "terminal.integrated.defaultProfile.linux": "tmux",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.profiles.linux": {
     "zsh": {
       "path": "zsh"
@@ -92,7 +94,7 @@
   "todo-tree.general.tags": ["TODO:", "FIXME:"],
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 1,
   "workbench.activityBar.visible": true,
   "workbench.colorTheme": "Night Owl (No Italics)",
   "workbench.editor.openPositioning": "first",
