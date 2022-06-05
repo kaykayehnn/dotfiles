@@ -2,8 +2,9 @@
 # searching for shortcuts easier (only search for 1 sequence instead of all
 # its permutations).
 
-# Open iTerm
-ctrl + alt - space : open /Applications/iTerm.app
+# Open/focus terminal
+# TODO: use yabai to bypass space-switching animations
+ctrl + alt - space : open /Applications/kitty.app
 
 # Open System Preferences (0x2B is comma)
 cmd + shift - 0x2B : open "/System/Applications/System Preferences.app"
@@ -16,6 +17,7 @@ sound_up   -> : spotify vol up 5 > /Users/Krasimir/.skhd.log
 sound_down -> : spotify vol down 5 > /Users/Krasimir/.skhd.log
 
 # TODO: add open finder shortcut
+alt + cmd - n : open /System/Library/CoreServices/Finder.app
 
 # focus window
 alt - h : yabai -m window --focus west
@@ -24,10 +26,10 @@ alt - k : yabai -m window --focus north
 alt - l : yabai -m window --focus east
 
 # swap window
-shift + alt - h : yabai -m window --swap west
-shift + alt - j : yabai -m window --swap south
-shift + alt - k : yabai -m window --swap north
-shift + alt - l : yabai -m window --swap east
+shift + alt - h : yabai -m window --swap west || yabai -m window --swap east
+shift + alt - j : yabai -m window --swap south || yabai -m window --swap north
+shift + alt - k : yabai -m window --swap north || yabai -m window --swap south
+shift + alt - l : yabai -m window --swap east || yabai -m window --swap west
 
 # move window
 # interferes with open home directory in finder
@@ -62,6 +64,7 @@ shift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
 cmd + alt - w : yabai -m space --destroy
 
 # fast focus desktop
+ 
 cmd + alt - x : yabai -m space --focus recent
 cmd + alt - z : yabai -m space --focus prev
 cmd + alt - c : yabai -m space --focus next
@@ -79,7 +82,7 @@ cmd + alt - c : yabai -m space --focus next
 #cmd + alt - 0 : yabai -m space --focus 10
 
 # send window to desktop and follow focus
-shift + cmd - x : yabai -m window --space recent; yabai -m space --focus recent
+#shift + cmd - x : yabai -m window --space recent; yabai -m space --focus recent
 # redo
 #shift + cmd - z : yabai -m window --space prev; yabai -m space --focus prev
 # open computer in finder
@@ -96,13 +99,8 @@ shift + cmd - 8 : yabai -m window --space  8; yabai -m space --focus 8
 shift + cmd - 9 : yabai -m window --space  9; yabai -m space --focus 9
 shift + cmd - 0 : yabai -m window --space 10; yabai -m space --focus 10
 
-# focus monitor
-ctrl + alt - x  : yabai -m display --focus recent
-ctrl + alt - z  : yabai -m display --focus prev
-ctrl + alt - c  : yabai -m display --focus next
-ctrl + alt - 1  : yabai -m display --focus 1
-ctrl + alt - 2  : yabai -m display --focus 2
-ctrl + alt - 3  : yabai -m display --focus 3
+# switch to other monitor (this won't work with more than 2 monitors)
+shift + cmd  - x  : yabai -m display --focus recent
 
 # send window to monitor and follow focus
 ctrl + cmd - x  : yabai -m window --display recent; yabai -m display --focus recent
