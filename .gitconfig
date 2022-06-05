@@ -5,6 +5,13 @@
 [init]
   defaultBranch = main
 
+# Use delta for diffs
+# TODO: choose theme
+[core]
+  pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended'
+[interactive]
+  diffFilter = delta --color-only
+
 [instaweb]
   # Python's http server is installed by default on macOS, unlike lighttpd
   # (git's default httpd)
