@@ -11,6 +11,7 @@ cmd + shift - 0x2B : open "/System/Applications/System Preferences.app"
 # volume settings
 # TODO: maybe only in spotify app?
 # https://github.com/hnarayanan/shpotify/blob/cd655633/spotify#L334-L337
+# TODO: number argument is not implemented in shpotify
 sound_up   -> : spotify vol up 5 > /Users/Krasimir/.skhd.log
 sound_down -> : spotify vol down 5 > /Users/Krasimir/.skhd.log
 
