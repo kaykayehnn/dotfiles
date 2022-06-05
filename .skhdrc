@@ -5,6 +5,9 @@
 # Open iTerm
 ctrl + alt - space : open /Applications/iTerm.app
 
+# Open System Preferences (0x2B is comma)
+cmd + shift - 0x2B : open "/System/Applications/System Preferences.app"
+
 # volume settings
 # TODO: maybe only in spotify app?
 # https://github.com/hnarayanan/shpotify/blob/cd655633/spotify#L334-L337
