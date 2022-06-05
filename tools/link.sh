@@ -30,6 +30,8 @@ SYMLINK_MAP=(
   "$DOTFILES/.xbindkeysrc" "$HOME/.xbindkeysrc"
   "$DOTFILES/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
   "$DOTFILES/libinput-gestures.conf" "$HOME/.config/libinput-gestures.conf"
+  "$DOTFILES/.skhdrc" "$HOME/.skhdrc"
+  "$DOTFILES/.yabairc" "$HOME/.yabairc"
   # VSCode files
   "$DOTFILES/vscode/settings.json" "$VSCODE_ROOT/User/settings.json"
   "$DOTFILES/vscode/keybindings.json" "$VSCODE_ROOT/User/keybindings.json"
