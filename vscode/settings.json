@@ -99,6 +99,11 @@
   "workbench.activityBar.visible": true,
   "workbench.colorTheme": "Night Owl (No Italics)",
   "workbench.editor.openPositioning": "first",
+  "workbench.editor.wrapTabs": true,
+  // Disable GitLens's GUI rebase editor
+  "workbench.editorAssociations": {
+    "git-rebase-todo": "default"
+  },
   "workbench.iconTheme": "material-icon-theme",
   "zenMode.centerLayout": false,
   "telemetry.telemetryLevel": "off",
