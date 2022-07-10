@@ -5,13 +5,6 @@
 [init]
   defaultBranch = main
 
-# Use delta for diffs
-# TODO: choose theme
-[core]
-  pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended'
-[interactive]
-  diffFilter = delta --color-only
-
 [instaweb]
   # Python's http server is installed by default on macOS, unlike lighttpd
   # (git's default httpd)
@@ -22,27 +15,17 @@
 
 # Use delta for diff
 # https://github.com/dandavison/delta#configuration
-[pager]
-  diff = delta
-  log = delta
-  reflog = delta
-  show = delta
+[core]
+  pager = delta
 
 [interactive]
-  diffFilter = delta --color-only --features=interactive
+  diffFilter = delta --color-only
 
 [delta]
-  features = decorations
-  syntax-theme = Monokai Extended
+  navigate = true # use n and N to move between diff sections
+  line-numbers = true
 
-[delta "interactive"]
-  keep-plus-minus-markers = false
-
-[delta "decorations"]
-  commit-decoration-style = blue ol
-  commit-style = raw
-  file-style = omit
-  hunk-header-decoration-style = blue box
-  hunk-header-file-style = red
-  hunk-header-line-number-style = "#067a00"
-  hunk-header-style = file line-number syntax
+# TODO: maybe set this?
+# https://git-scm.com/docs/git-config#Documentation/git-config.txt-interactivediffFilter
+# [interactive]
+#   diffFilter = delta --color-only --features=interactive
