@@ -47,5 +47,9 @@
       "  return ${2:<h1>Hello from $1</h1>}$0;",
       "};"
     ]
+  },
+  "DisplayName": {
+    "prefix": "disp",
+    "body": ["", "$TM_FILENAME_BASE.displayName = '$TM_FILENAME_BASE';", ""]
   }
 }
