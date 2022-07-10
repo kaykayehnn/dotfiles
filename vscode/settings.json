@@ -43,6 +43,7 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.sortOrder": "type",
   "git.confirmSync": false,
+  "git.mergeEditor": true,
   "gitlens.mode.active": "zen",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.validate.enable": false,
