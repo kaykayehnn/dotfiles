@@ -17,16 +17,6 @@ export DDGR_COLORS="oFdgxy"
 export YSU_MESSAGE_POSITION="after"
 export YSU_IGNORED_ALIASES=("g" "c")
 
-# fzf options
-FD_COMMAND="fd --hidden --exclude .git --exclude node_modules"
-export FZF_DEFAULT_COMMAND="$FD_COMMAND --type f"
-export FZF_CTRL_T_COMMAND="$FD_COMMAND"
-export FZF_CTRL_T_OPTS="--preview '(bat --color=always {} 2> /dev/null || tree -I node_modules -C {})'"
-export FZF_ALT_C_COMMAND="$FD_COMMAND --type d"
-export FZF_ALT_C_OPTS="--preview 'tree -I node_modules -C {}'"
-export FZF_DEFAULT_OPTS='--height 40%'
-unset FD_COMMAND
-
 # Use trash-cli with nnn. For gio trash, set to 2
 export NNN_TRASH=1
 
@@ -92,7 +82,24 @@ setup_brew() {
   fi
 }
 
+setup_fzf() {
+  # To install useful keybindings and fuzzy completion:
+  # /opt/homebrew/opt/fzf/install
+
+  FD_COMMAND="fd --hidden --exclude .git --exclude node_modules"
+  export FZF_DEFAULT_COMMAND="$FD_COMMAND --type f"
+  export FZF_CTRL_T_COMMAND="$FD_COMMAND"
+  export FZF_CTRL_T_OPTS="--preview '(bat --color=always {} 2> /dev/null || tree -I node_modules -C {})'"
+  export FZF_ALT_C_COMMAND="$FD_COMMAND --type d"
+  export FZF_ALT_C_OPTS="--preview 'tree -I node_modules -C {}'"
+  export FZF_DEFAULT_OPTS='--height 40%'
+  unset FD_COMMAND
+
+  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+}
+
 setup_z
 setup_brew
+setup_fzf
 
-unset -f setup_z setup_brew
+unset -f setup_z setup_brew setup_fzf
