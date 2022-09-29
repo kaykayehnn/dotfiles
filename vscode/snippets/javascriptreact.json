@@ -20,5 +20,9 @@
   "Div": {
     "prefix": "div",
     "body": "<div className='$1'>$0</div>"
+  },
+  "DisplayName": {
+    "prefix": "disp",
+    "body": ["", "$TM_FILENAME_BASE.displayName = '$TM_FILENAME_BASE';", ""]
   }
 }
