@@ -7,7 +7,7 @@
 ctrl + alt - space : open /Applications/kitty.app
 
 # Open System Preferences (0x2B is comma)
-cmd + shift - 0x2B : open "/System/Applications/System Preferences.app"
+cmd + shift - 0x2B : open "/System/Applications/System Settings.app"
 
 # volume settings
 # TODO: maybe only in spotify app?
