@@ -105,7 +105,8 @@ main() {
     yarn global add kaykayehnn/live-server#fix-crash-loading-config \
       nodemon \
       parrotsay \
-      serve@^6
+      serve@^6 \
+      open-cli
   fi
 
   # Check if oh-my-zsh is installed
