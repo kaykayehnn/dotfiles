@@ -5,7 +5,8 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": true,
+    "source.organizeImports": true
   },
   "editor.cursorSurroundingLines": 3,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
