@@ -58,7 +58,8 @@
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.profiles.linux": {
     "zsh": {
-      "path": "zsh"
+      "path": "zsh",
+      "icon": "terminal-linux"
     },
     "tmux": {
       "path": "zsh",
