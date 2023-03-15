@@ -5,6 +5,9 @@
 [init]
   defaultBranch = main
 
+[push]
+  autoSetupRemote = true
+
 [instaweb]
   # Python's http server is installed by default on macOS, unlike lighttpd
   # (git's default httpd)
