@@ -75,7 +75,7 @@ plugins=(
   git
   zsh-autosuggestions
   vscode
-  zsh-syntax-highlighting
+  fast-syntax-highlighting
   # Yarn plugin slows startup considerably.
   # yarn
   extract
