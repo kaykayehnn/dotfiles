@@ -76,6 +76,7 @@ plugins=(
   zsh-autosuggestions
   vscode
   fast-syntax-highlighting
+  zsh-you-should-use
   # Yarn plugin slows startup considerably.
   # yarn
   extract
@@ -124,10 +125,6 @@ source $DOTFILES/shell/setup.sh
 source $DOTFILES/shell/theme.zsh
 
 source $ZSH/oh-my-zsh.sh
-
-# This plugin doesn't follow the naming conventions so zsh cannot load it
-# automatically.
-source $ZSH_CUSTOM/plugins/zsh-you-should-use/you-should-use.plugin.zsh
 
 # In case extra.sh does not exist the initial prompt renders an error exit
 # code as this is the last command executed before it. We OR it with true to
