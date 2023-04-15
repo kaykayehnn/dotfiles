@@ -117,8 +117,6 @@ source $DOTFILES/shell/docker-compose.plugin.zsh
 # by inlining the plugin before sourcing oh-my-zsh.
 fpath+="$ZSH/custom/plugins/zsh-completions/src"
 
-typeset -g ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#6A6A6A'
-
 # Source custom shell files before zsh to be able to make overrides.
 source $DOTFILES/shell/aliases.sh
 source $DOTFILES/shell/setup.sh
