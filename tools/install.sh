@@ -126,7 +126,7 @@ main() {
 
   ZSH_PLUGINS=(
     zsh-users/zsh-autosuggestions
-    zsh-users/zsh-syntax-highlighting
+    zdharma-continuum/fast-syntax-highlighting
     zsh-users/zsh-completions
     MichaelAquilina/zsh-you-should-use
   )
