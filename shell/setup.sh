@@ -56,15 +56,13 @@ fi
 # Bind Ctrl-Space to execute current suggestion
 bindkey '^ ' autosuggest-execute
 
-setup_z() {
-  # Change z command to something else so it does not conflict with enhancement.
-  _Z_CMD="zzz"
+setup_zoxide() {
+  eval "$(zoxide init zsh --no-cmd)"
 
-  # Overrides z to make it interactive when called with no arguments.
+  # Run zi when run with 0 arguments and z when there are any arguments.
   z() {
-    [ $# -gt 0 ] && _z "$*" && return
-    # shellcheck disable=SC2164
-    cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
+    [ $# -gt 0 ] && __zoxide_z "$*"; return
+    __zoxide_zi
   }
 }
 
@@ -98,8 +96,8 @@ setup_fzf() {
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 }
 
-setup_z
+setup_zoxide
 setup_brew
 setup_fzf
 
-unset -f setup_z setup_brew setup_fzf
+unset -f setup_zoxide setup_brew setup_fzf
