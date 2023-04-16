@@ -168,24 +168,32 @@ main() {
   
   # Install vscode extensions
   # Without force vscode does not update already installed extensions
+  code_fallback --install-extension albert.TabOut --force
   code_fallback --install-extension dbaeumer.vscode-eslint --force
   code_fallback --install-extension eamodio.gitlens --force
   code_fallback --install-extension EditorConfig.EditorConfig --force
   code_fallback --install-extension esbenp.prettier-vscode --force
   code_fallback --install-extension Gruntfuggly.todo-tree --force
   code_fallback --install-extension styled-components.vscode-styled-components --force
+  code_fallback --install-extension ms-azuretools.vscode-docker --force
   code_fallback --install-extension ms-dotnettools.csharp --force
+  code_fallback --install-extension ms-python.isort --force
   code_fallback --install-extension ms-python.python --force
   code_fallback --install-extension ms-python.vscode-pylance --force
+  code_fallback --install-extension ms-vscode-remote.remote-containers --force
   code_fallback --install-extension ms-vscode-remote.remote-ssh --force
   code_fallback --install-extension ms-vscode-remote.remote-ssh-edit --force
+  code_fallback --install-extension ms-vscode.remote-explorer --force
   code_fallback --install-extension PKief.material-icon-theme --force
   code_fallback --install-extension pnp.polacode --force
-  code_fallback --install-extension sdras.night-owl --force
-  code_fallback --install-extension VisualStudioExptTeam.vscodeintellicode --force
-  code_fallback --install-extension ms-azuretools.vscode-docker --force
   code_fallback --install-extension redhat.vscode-xml --force
-
+  code_fallback --install-extension richie5um2.vscode-statusbar-json-path --force
+  code_fallback --install-extension sdras.night-owl --force
+  code_fallback --install-extension svelte.svelte-vscode --force
+  code_fallback --install-extension timonwong.shellcheck --force
+  code_fallback --install-extension VisualStudioExptTeam.intellicode-api-usage-examples --force
+  code_fallback --install-extension VisualStudioExptTeam.vscodeintellicode --force
+  
   # Update tldr pages if tldr is installed
   if command -v tldr &> /dev/null; then
     tldr --update
