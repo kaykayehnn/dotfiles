@@ -82,7 +82,6 @@ plugins=(
   extract
   docker
   fzf
-  z
   # TODO: colored-man-pages does not handle some edge cases correctly.
   # Submit a PR to improve it
   # See the following commit for reference
