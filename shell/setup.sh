@@ -61,7 +61,11 @@ setup_zoxide() {
 
   # Run zi when run with 0 arguments and z when there are any arguments.
   z() {
-    [ $# -gt 0 ] && __zoxide_z "$*"; return
+    if [ $# -gt 0 ]; then
+      __zoxide_z "$*"
+      return
+    fi
+    
     __zoxide_zi
   }
 }
