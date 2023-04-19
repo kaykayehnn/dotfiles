@@ -128,7 +128,7 @@ main() {
     zsh-users/zsh-autosuggestions
     zdharma-continuum/fast-syntax-highlighting
     zsh-users/zsh-completions
-    kaykayehnn/zsh-you-should-use
+    MichaelAquilina/zsh-you-should-use
   )
 
   # Install zsh plugins
