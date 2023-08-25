@@ -57,6 +57,12 @@ yabai -m config window_gap                   5
 # TODO: some windows are locked to float mode. why?
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Safari$" title="Passwords$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+# Disable tiling for Calendar pop-up windows when creating new events
+yabai -m rule --add app="^Calendar$" title="^$" manage=off
+
+# Personal settings
+yabai -m rule --add app="^Slack$" manage=off
 
 # CMD-I
 yabai -m rule --add app="^Finder$" title="Info$" manage=off
