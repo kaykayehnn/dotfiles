@@ -100,8 +100,9 @@ setup_fzf() {
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 }
 
-setup_zoxide
+# Brew needs to be setup first so that it's binaries are available!
 setup_brew
+setup_zoxide
 setup_fzf
 
 unset -f setup_zoxide setup_brew setup_fzf
