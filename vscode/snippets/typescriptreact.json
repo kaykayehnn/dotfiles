@@ -36,6 +36,17 @@
     ],
     "description": "React Component base"
   },
+  "Props Interface": {
+    "prefix": "iface",
+    "body": [
+      "export interface ${TM_FILENAME_BASE}Props {",
+      // This is just so the brackets don't collapse automatically.
+      "  //",
+      "}",
+      ""
+    ],
+    "description": "React props interface"
+  },
   "Css Prop": {
     "prefix": "css",
     "body": ["css={css`", "  $0;", "`}"]
