@@ -74,7 +74,7 @@ main() {
       sudo pacman -R thunderbird snapd pamac-snap-plugin
     elif [[ "$NAME" == "Ubuntu" || "$NAME" == "Debian GNU/Linux" ]]; then
       sudo apt update
-      sudo apt install -y zsh neofetch tmux htop tldr fzf python3 trash-cli zoxide
+      sudo apt install -y zsh neofetch tmux htop tldr fzf python3 trash-cli zoxide ripgrep
     fi
     
     # Install packages common for all Linux distros
