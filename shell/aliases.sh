@@ -30,6 +30,14 @@ alias xclip="xclip -selection clipboard"
 alias open="open-cli"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  . /etc/os-release
+
+  # Debian installs bat as batcat by default
+  if [[ "$NAME" == "Ubuntu" || "$NAME" == "Debian GNU/Linux" ]]; then
+    if command -v batcat &> /dev/null; then
+      alias bat="batcat"
+    fi
+  fi
   # Mirror macOS copy/paste commands
   alias pbcopy="xclip"
   alias pbpaste="xclip -o"
