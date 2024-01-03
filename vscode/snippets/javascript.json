@@ -8,5 +8,10 @@
     "prefix": "clog",
     "body": ["console.log($0)"],
     "description": "Log to console"
-  }
+  },
+  "Print JSON to console": {
+    "prefix": "jlog",
+    "body": ["console.log(JSON.stringify($0, null, 2))"],
+    "description": "Log JSON to console"
+  },
 }
