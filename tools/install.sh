@@ -146,6 +146,8 @@ main() {
     git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   fi
 
+  # TODO: this brings up an error when ran inside a tmux session
+  # Error: sessions should be nested with care, unset $TMUX to force
   # Installing tmux plugins requires tmux server to be running so we set up a
   # temporary session for install them.
   tmux new-session -d -s _install-plugins
