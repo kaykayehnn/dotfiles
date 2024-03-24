@@ -17,9 +17,7 @@
   "React Component": {
     "prefix": "jsx",
     "body": [
-      "/** @jsx jsx */",
-      "import { jsx, css } from \"@emotion/react\";",
-      "import React from \"react\";",
+      "import { FC } from \"react\";",
       "",
       "export interface ${TM_FILENAME_BASE}Props {",
       // This is just so the brackets don't collapse automatically.
