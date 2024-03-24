@@ -175,8 +175,9 @@ alt - t : yabai -m window --toggle float;\
 alt - s : yabai -m window --toggle sticky
 
 # toggle sticky, float and resize to picture-in-picture size
-alt - p : yabai -m window --toggle sticky;\
-          yabai -m window --grid 5:5:4:0:1:1
+# TODO: interferes with Maccy's pin
+# alt - p : yabai -m window --toggle sticky;\
+#          yabai -m window --grid 5:5:4:0:1:1
 
 # change layout of desktop
 # TODO: make this a toggle
