@@ -14,7 +14,7 @@
   httpd = python
   
 [rerere]
-  enabled = true
+	enabled = true
 
 # Use delta for diff
 # https://github.com/dandavison/delta#configuration
