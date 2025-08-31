@@ -42,3 +42,5 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
   alias pbcopy="xclip"
   alias pbpaste="xclip -o"
 fi
+
+alias gswitch='git branch --sort=-committerdate --format "%(refname:short)" | fzf --print0 | xargs -0 -o git checkout'
